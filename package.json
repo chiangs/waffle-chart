@@ -1,0 +1,72 @@
+{
+    "name": "waffle-chart",
+    "version": "1.0.0",
+    "description": "waffle-chart",
+    "author": "chiangs",
+    "license": "MIT",
+    "keywords": [
+        "waffle",
+        "chart",
+        "pie"
+    ],
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "main": "./dist/waffle-chart.umd.js",
+    "module": "./dist/waffle-chart.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/waffle-chart.es.js",
+            "require": "./dist/waffle-chart.umd.js"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "test": "vitest run",
+        "watch": "vitest",
+        "coverage": "vitest run --coverage"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "node": true,
+            "es2020": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:react/recommended"
+        ],
+        "parserOptions": {
+            "sourceType": "module"
+        }
+    },
+    "devDependencies": {
+        "@testing-library/dom": "^8.16.1",
+        "@testing-library/react": "^13.3.0",
+        "@vitejs/plugin-react": "^2.0.0",
+        "c8": "^7.12.0",
+        "eslint": "^8.21.0",
+        "eslint-plugin-react": "^7.30.1",
+        "jsdom": "^20.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-test-renderer": "^18.2.0",
+        "typescript": "^4.7.4",
+        "vite": "^3.0.4",
+        "vitest": "^0.21.0"
+    }
+}

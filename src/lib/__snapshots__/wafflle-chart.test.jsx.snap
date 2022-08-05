@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`HelloWorld > HelloWorld component renders correctly 1`] = `
+<div>
+  index
+</div>
+`;
