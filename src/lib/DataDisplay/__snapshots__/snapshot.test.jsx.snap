@@ -1,0 +1,59 @@
+// Vitest Snapshot v1
+
+exports[`DataDisplay > DataDisplay component renders correctly 1`] = `
+<div
+  className="waffle-chart-display-container false"
+  data-testid="display-container"
+>
+  <div
+    className="display-item"
+    data-testid="display-item"
+    style={
+      {
+        "color": "",
+      }
+    }
+  >
+    <h3
+      className="display-item-title"
+      data-testid="display-percentage"
+    >
+      1
+      %
+    </h3>
+    <p
+      className="display-item-description"
+      data-testid="display-count"
+    >
+      1
+       
+      data1
+    </p>
+  </div>
+  <div
+    className="display-item"
+    data-testid="display-item"
+    style={
+      {
+        "color": "",
+      }
+    }
+  >
+    <h3
+      className="display-item-title"
+      data-testid="display-percentage"
+    >
+      2
+      %
+    </h3>
+    <p
+      className="display-item-description"
+      data-testid="display-count"
+    >
+      2
+       
+      data2
+    </p>
+  </div>
+</div>
+`;

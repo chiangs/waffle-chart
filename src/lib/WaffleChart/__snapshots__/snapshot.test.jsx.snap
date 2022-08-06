@@ -1,0 +1,568 @@
+// Vitest Snapshot v1
+
+exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
+<div
+  className="waffle-chart-container"
+>
+  <div
+    className="waffle-chart bottom right"
+    data-testid="chart-container"
+  >
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+    <div
+      className="waffle-chart-square animate-fill"
+      data-testid="chart-square"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="waffle-chart-display-container bottom"
+    data-testid="display-container"
+  >
+    <div
+      className="display-item"
+      data-testid="display-item"
+      style={
+        {
+          "color": "palevioletred",
+        }
+      }
+    >
+      <h3
+        className="display-item-title"
+        data-testid="display-percentage"
+      >
+        0
+        %
+      </h3>
+      <p
+        className="display-item-description"
+        data-testid="display-count"
+      >
+        0
+         
+        count
+      </p>
+    </div>
+    <div
+      className="display-item"
+      data-testid="display-item"
+      style={
+        {
+          "color": "cadetblue",
+        }
+      }
+    >
+      <h3
+        className="display-item-title"
+        data-testid="display-percentage"
+      >
+        100
+        %
+      </h3>
+      <p
+        className="display-item-description"
+        data-testid="display-count"
+      >
+        100
+         
+        count
+      </p>
+    </div>
+  </div>
+</div>
+`;

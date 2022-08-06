@@ -17,15 +17,27 @@ const DataDisplay: React.FC<Props> = (props: Props) => {
         dataLabel,
         color = '',
     }: DataDisplayProps) => (
-        <div key={value} className='display-item' style={{ color }}>
-            <h3 className='display-item-title'>{value}%</h3>
-            <p className='display-item-description'>
+        <div
+            key={value}
+            className='display-item'
+            style={{ color }}
+            data-testid='display-item'>
+            <h3 className='display-item-title' data-testid='display-percentage'>
+                {value}%
+            </h3>
+            <p className='display-item-description' data-testid='display-count'>
                 {count}&nbsp;{dataLabel}
             </p>
         </div>
     );
     const display = [props?.data1, props?.data2].map((d) => displayItem(d));
-    return <div className={displayClasses.join(' ')}>{display}</div>;
+    return (
+        <div
+            className={displayClasses.join(' ')}
+            data-testid='display-container'>
+            {display}
+        </div>
+    );
 };
 
 export default DataDisplay;

@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { describe, expect, test } from 'vitest';
-import HelloWorld from '../index';
+import { WaffleChart } from './index';
 
-describe('HelloWorld', () => {
-    test('HelloWorld component renders correctly', () => {
-        const component = renderer.create(<HelloWorld />);
+describe('WaffleChart', () => {
+    test('WaffleChart component renders correctly', () => {
+        const component = renderer.create(<WaffleChart />);
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });

@@ -42,7 +42,9 @@ const Chart: React.FC<Props> = ({
     };
     const grid = itemProps.map((p) => gridItem(p));
     return (
-        <div className={`waffle-chart ${verticalFill} ${horizontalFill}`}>
+        <div
+            className={`waffle-chart ${verticalFill} ${horizontalFill}`}
+            data-testid='chart-container'>
             {grid}
         </div>
     );

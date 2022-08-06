@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`Chart > Chart component renders correctly 1`] = `
+<div
+  className="waffle-chart top left"
+  data-testid="chart-container"
+/>
+`;
