@@ -1,7 +1,1 @@
-export const Chart: React.FC = () => {
-  return (
-    <>
-      <h1>Chart</h1>
-    </>
-  );
-};
+export { default as Chart } from './Chart';
