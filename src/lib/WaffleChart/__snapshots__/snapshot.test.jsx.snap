@@ -3,6 +3,7 @@
 exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
 <div
   className="waffle-chart-container"
+  data-testid="waffle-chart-container"
 >
   <div
     className="waffle-chart bottom right"

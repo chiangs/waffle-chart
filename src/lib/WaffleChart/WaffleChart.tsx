@@ -234,7 +234,9 @@ const WaffleChart: React.FC<Props> = ({
         clickHandler && props.isValue ? clickHandler(props) : null;
 
     return (
-        <div className='waffle-chart-container'>
+        <div
+            className='waffle-chart-container'
+            data-testid='waffle-chart-container'>
             <Chart
                 bgDefaultStyle={bgPartBstyle}
                 bgValuedStyle={bgPartAstyle}
