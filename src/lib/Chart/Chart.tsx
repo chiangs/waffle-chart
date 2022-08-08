@@ -37,6 +37,7 @@ const Chart: React.FC<Props> = ({
                 className={classes.join(' ')}
                 style={props.isValue ? bgValuedStyle : bgDefaultStyle}
                 key={props.index}
+                title={`square${props.index}`}
                 onClick={() => onItemClick(props)}></div>
         );
     };

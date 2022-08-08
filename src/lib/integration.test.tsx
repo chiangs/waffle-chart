@@ -75,12 +75,81 @@ describe('Integration test', () => {
         );
         const squares = getAllByTestId(TESTID_SQUARE);
         const square = squares[99];
-        const nonValueSquare = squares[0];
         const spy = vi.spyOn(square, 'click');
-        const spy2 = vi.spyOn(nonValueSquare, 'click');
         await user.click(square);
         expect(spy.getMockName()).toEqual('click');
         expect(mock).toHaveBeenCalledOnce();
         expect(mock).toHaveBeenCalledWith({ index: 1, isValue: true });
+    });
+
+    test('Rounding method selection reflect number of squares filled', () => {
+        const getPartASquares = (collection) =>
+            collection.filter((s) => s.className.includes(CLASS_FILLED));
+        const partA = 95.5;
+        const partB = 100;
+        const defaultAndUpRoundingCount = 96;
+        const downRounding = 95;
+        const props = { ...DEFAULT_PROPS, partA, partB };
+        const { rerender, getByTestId, getAllByTestId } = render(
+            <WaffleChart {...props} />
+        );
+        let numPartAsquares = getPartASquares(
+            getAllByTestId(TESTID_SQUARE)
+        ).length;
+        const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
+        expect(displayContainer).toBeTruthy();
+        expect(numPartAsquares).toBe(defaultAndUpRoundingCount);
+        screen.getByText(`${defaultAndUpRoundingCount}%`);
+        screen.getByText(`${partA} count`);
+        rerender(<WaffleChart {...props} rounding={'up'} />);
+        numPartAsquares = getPartASquares(getAllByTestId(TESTID_SQUARE)).length;
+        expect(numPartAsquares).toBe(defaultAndUpRoundingCount);
+        rerender(<WaffleChart {...props} rounding={'down'} />);
+        numPartAsquares = getPartASquares(getAllByTestId(TESTID_SQUARE)).length;
+        expect(numPartAsquares).toBe(downRounding);
+        screen.getByText(`${downRounding}%`);
+        screen.getByText(`${partA} count`);
+    });
+
+    test('Fill prop changes the visual filling of chart squares and adds the remainder', () => {
+        const getFilledSquareIndexes = (collection: HTMLElement[]) => {
+            const filledSquares = collection.filter((s) =>
+                s.className.includes(CLASS_FILLED)
+            );
+            const titles = filledSquares.map((s) => s.title);
+            return titles;
+        };
+        const partA = 5;
+        const partB = 100;
+        const defaultIndexes = [
+            `square5`,
+            `square4`,
+            `square3`,
+            `square2`,
+            `square1`,
+        ];
+        const squareIndexes = [
+            `square12`,
+            `square11`,
+            `square3`,
+            `square2`,
+            `square1`,
+        ];
+        const propsDefaultFill = { ...DEFAULT_PROPS, partA, partB };
+        const propsSquareFill = { ...propsDefaultFill, isSquareFill: true };
+        const { rerender, getByTestId, getAllByTestId } = render(
+            <WaffleChart {...propsDefaultFill} />
+        );
+        const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
+        expect(displayContainer).toBeTruthy();
+        const indexesWithDefaultFill = getFilledSquareIndexes(
+            getAllByTestId(TESTID_SQUARE)
+        );
+        expect(indexesWithDefaultFill).toStrictEqual(defaultIndexes);
+        rerender(<WaffleChart {...propsSquareFill} />);
+        const indexesWithSquareFill = getFilledSquareIndexes(
+            getAllByTestId(TESTID_SQUARE)
+        );
+        expect(indexesWithSquareFill).toStrictEqual(squareIndexes);
     });
 });
