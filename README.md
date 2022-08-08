@@ -1,4 +1,5 @@
 - [Introduction](#introduction)
+  - [Supporting reads](#supporting-reads)
   - [API](#api)
   - [Installing](#installing)
   - [Contributing](#contributing)
@@ -18,6 +19,14 @@ As an American assimilating into Norway and the way of life, I'd like to think N
 ```
 
 There, I said it...and it's true.
+
+## Supporting reads
+
+- [📄 Storyteling with Data](https://www.storytellingwithdata.com/)
+- [📄 The Issue with Pie (Donut) Chart](https://www.data-to-viz.com/caveat/pie.html)
+- [📄 The Worst Chart In The World](https://www.businessinsider.com/pie-charts-are-the-worst-2013-6?r=US&IR=T)
+- [📄 Waffles vs Pies - A visualization showdown!](https://www.barefootdatascience.com/2017/09/17/waffle-vs-pie-a-visualization-showdown/)
+- [📄 Your Dashboard Needs a Waffle Chart](https://aptitive.com/blog/your-dashboard-needs-a-waffle-chart/)
 
 Turn your hard-to-read and unhelpful pie / donut charts into a more user-friendly waffle-chart.
 

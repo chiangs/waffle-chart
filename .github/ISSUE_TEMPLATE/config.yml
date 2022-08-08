@@ -3,21 +3,3 @@ contact_links:
     - name: 🤔 Feature Requests & questions
       url: https://github.com/chiangs/waffle-chart/discussions
       about: Please ask and answer questions here.
-    - name: GitHub Security Bug Bounty
-      url: https://bounty.github.com/zQxawsZ
-      about: Please report security vulnerabilities here.
-    - name: 📄 Storyteling with Data.
-      url: https://www.storytellingwithdata.com/
-      about: Learn more about storytelling with data.
-    - name: 📄 The Issue with Pie (Donut) Chart.
-      url: https://www.data-to-viz.com/caveat/pie.html
-      about: What's wrong with pie and donut charts?
-    - name: 📄 The Worst Chart In The World.
-      url: https://www.businessinsider.com/pie-charts-are-the-worst-2013-6?r=US&IR=T
-      about: Spoiler alert - It's the pie.
-    - name: 📄 Waffles vs Pies.
-      url: https://www.barefootdatascience.com/2017/09/17/waffle-vs-pie-a-visualization-showdown/
-      about: Waffle vs. Pie - A visualization showdown!
-    - name: 📄 Your Dashboard Needs a Waffle Chart.
-      url: https://aptitive.com/blog/your-dashboard-needs-a-waffle-chart/
-      about: More case for the waffles.
