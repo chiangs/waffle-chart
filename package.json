@@ -27,7 +27,7 @@
         "test": "vitest run",
         "watch": "vitest",
         "coverage": "vitest run --coverage",
-        "ui": "vitest --ui"
+        "testui": "vitest --ui"
     },
     "browserslist": {
         "production": [
