@@ -23,8 +23,23 @@ describe('Integration test', () => {
     });
 
     test('Expect parts to display percentage and count', () => {
+        const partA = 1;
+        const partB = 4;
+        const partAlabel = 'puppies';
+        const partBlabel = 'kittens';
+        const props = {
+            ...DEFAULT_PROPS,
+            partA,
+            partB,
+            partAlabel,
+            partBlabel,
+        };
+        const partApercentage = (partA / partB) * 100;
+        const partAcount = `${partA} ${partAlabel}`;
+        const partBpercentage = 100 - partApercentage;
+        const partBcount = `${partB} ${partBlabel}`;
         const { queryAllByTestId, getByTestId } = render(
-            <WaffleChart {...DEFAULT_PROPS} />
+            <WaffleChart {...props} />
         );
         const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
         const displayItems = queryAllByTestId(TESTID_DISPLAY_ITEM);
@@ -34,8 +49,10 @@ describe('Integration test', () => {
         expect(displayItems.length).toBe(2);
         expect(displayPercentages.length).toBe(2);
         expect(displayCount.length).toBe(2);
-        screen.getByText('0%');
-        screen.getByText('100%');
+        screen.getByText(`${partApercentage}%`);
+        screen.getByText(`${partBpercentage}%`);
+        screen.getByText(partAcount);
+        screen.getByText(partBcount);
     });
 
     test('Expect chart to colorize the number of squares equal to partA value', () => {
@@ -99,6 +116,7 @@ describe('Integration test', () => {
         const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
         expect(displayContainer).toBeTruthy();
         expect(numPartAsquares).toBe(defaultAndUpRoundingCount);
+        screen.logTestingPlaygroundURL();
         screen.getByText(`${defaultAndUpRoundingCount}%`);
         screen.getByText(`${partA} count`);
         rerender(<WaffleChart {...props} rounding={'up'} />);

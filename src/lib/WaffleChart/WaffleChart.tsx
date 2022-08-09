@@ -215,8 +215,8 @@ const WaffleChart: React.FC<Props> = ({
         const { data1Props, data2Props } = createDisplayProps(
             partA,
             partB,
-            partBlabel,
             partAlabel,
+            partBlabel,
             rounded,
             bgPartAstyle,
             bgPartBstyle
