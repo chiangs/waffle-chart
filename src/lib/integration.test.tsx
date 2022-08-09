@@ -115,13 +115,15 @@ describe('Integration test', () => {
         ).length;
         const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
         expect(displayContainer).toBeTruthy();
+        // Default rounding to nearest
         expect(numPartAsquares).toBe(defaultAndUpRoundingCount);
-        screen.logTestingPlaygroundURL();
         screen.getByText(`${defaultAndUpRoundingCount}%`);
         screen.getByText(`${partA} count`);
+        // Round up
         rerender(<WaffleChart {...props} rounding={'up'} />);
         numPartAsquares = getPartASquares(getAllByTestId(TESTID_SQUARE)).length;
         expect(numPartAsquares).toBe(defaultAndUpRoundingCount);
+        // Round down
         rerender(<WaffleChart {...props} rounding={'down'} />);
         numPartAsquares = getPartASquares(getAllByTestId(TESTID_SQUARE)).length;
         expect(numPartAsquares).toBe(downRounding);
@@ -137,9 +139,11 @@ describe('Integration test', () => {
             const titles = filledSquares.map((s) => s.title);
             return titles;
         };
-        const partA = 5;
+        const partA = 7;
         const partB = 100;
         const defaultIndexes = [
+            `square7`,
+            `square6`,
             `square5`,
             `square4`,
             `square3`,
@@ -147,6 +151,8 @@ describe('Integration test', () => {
             `square1`,
         ];
         const squareIndexes = [
+            `square21`,
+            `square13`,
             `square12`,
             `square11`,
             `square3`,
@@ -169,5 +175,19 @@ describe('Integration test', () => {
             getAllByTestId(TESTID_SQUARE)
         );
         expect(indexesWithSquareFill).toStrictEqual(squareIndexes);
+        // Change props to where square and remainder doesn't make sense
+        const invalidSquareFillIndexes = [`square2`, `square1`];
+        const invalidSquareFill = {
+            ...DEFAULT_PROPS,
+            partA: 2,
+            isSquareFill: true,
+        };
+        rerender(<WaffleChart {...invalidSquareFill} />);
+        const indexesWithInvalidSquareFill = getFilledSquareIndexes(
+            getAllByTestId(TESTID_SQUARE)
+        );
+        expect(indexesWithInvalidSquareFill).toStrictEqual(
+            invalidSquareFillIndexes
+        );
     });
 });
