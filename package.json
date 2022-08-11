@@ -1,6 +1,6 @@
 {
     "name": "waffle-chart",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "description": "waffle-chart",
     "author": "chiangs",
     "license": "MIT",
@@ -12,6 +12,9 @@
     "homepage": "https://github.com/chiangs/waffle-chart/README.md",
     "repository": "github:chiangs/waffle-chart.git",
     "private": false,
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
     "files": [
         "dist",
         "README.md"
