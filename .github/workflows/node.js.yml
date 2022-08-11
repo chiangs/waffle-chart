@@ -39,5 +39,5 @@ jobs:
                   registry-url: 'https://www.npmjs.com/package/waffle-chart'
             - run: yarn publish
               env:
-                  NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
+                  YARN_TOKEN: ${{ secrets.YARN_TOKEN }}
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
