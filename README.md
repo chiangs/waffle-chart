@@ -1,5 +1,10 @@
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chiangs/waffle-chart/Node.js%20CI/main?style=for-the-badge)
+![GitHub all releases](https://img.shields.io/github/downloads/chiangs/waffle-chart/total?style=for-the-badge)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/chiangs/waffle-chart?style=for-the-badge)
+
 - [Introduction](#introduction)
-    - [Limitations](#limitations)
+  - [Usage in commercial projects](#usage-in-commercial-projects)
+  - [Limitations](#limitations)
   - [Demo](#demo)
   - [Supporting reads](#supporting-reads)
   - [API](#api)
@@ -47,7 +52,11 @@ This is a zero-dependency waffle chart built with React, Typescript & Vite.
 
 No `D3` only `HTML`, `CSS`, and `JS/TS`.
 
-### Limitations
+## Usage in commercial projects
+
+If you are using this in a commercial project, please consider leaving a donation/tip. Cheers!
+
+## Limitations
 
 - Requires browser support for CSS `grid` and `flexbox`.
 - Requires browser support for CSS `clamp()`.
@@ -148,7 +157,7 @@ import 'node_modules/waffle-chart/dist/style.css';
 ```
 
 ```ts
-import type { WaffleChartProps } from 'waffle-chart';
+import type { WaffleChartProps } from 'waffle-chart/dist/src/lib/__types';
 import { WaffleChart } from 'waffle-chart';
 
 type Props = WaffleChartProps;
