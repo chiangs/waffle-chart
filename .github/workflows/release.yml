@@ -30,11 +30,3 @@ jobs:
             - run: yarn publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-            - uses: actions/setup-node@v3
-              with:
-                  registry-url: 'https://npm.pkg.github.com'
-
-            - run: npm publish
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
