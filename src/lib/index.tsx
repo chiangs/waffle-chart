@@ -1,1 +1,1 @@
-export * from './WaffleChart';
+export { default as WaffleChart } from './WaffleChart';
