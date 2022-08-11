@@ -9,6 +9,7 @@ export default defineConfig({
             entry: path.resolve(__dirname, 'src/lib/index.tsx'),
             name: 'WaffleChart',
             fileName: (format) => `waffle-chart.${format}.js`,
+            cssCodeSplit: false,
         },
         rollupOptions: {
             external: ['react', 'react-dom'],

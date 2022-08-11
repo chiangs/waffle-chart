@@ -1,32 +1,18 @@
 import React from 'react';
 import type {
+    WaffleChartProps,
     DataDisplayProps,
     GridItemProps,
     HorizontalFill,
     Rounding,
     VerticalFill,
 } from '../__types';
+import './index.css';
 import Chart from '../Chart';
 import DataDisplay from '../DataDisplay';
 import Total from '../Total';
 
-type Props = {
-    partA?: number;
-    partB?: number;
-    partAlabel?: string;
-    partBlabel?: string;
-    rounding?: Rounding;
-    isFilledFromTop?: boolean;
-    isFrilledFromLeft?: boolean;
-    isSquareFill?: boolean;
-    isAnimatedFill?: boolean;
-    showDataDisplay?: boolean;
-    showTotal?: boolean;
-    partAColor?: string;
-    partBColor?: string;
-    totalColor?: string;
-    clickHandler?: (props: GridItemProps) => GridItemProps;
-};
+type Props = WaffleChartProps;
 
 /**
  * Rounds a number
@@ -130,7 +116,7 @@ const createPropsCollection = (
 ): GridItemProps[] => {
     const props: GridItemProps[] = [];
     const squareProps = isSquareFill ? getSquareProps(value) : null;
-    const setValueMethod = (i, isCompleteRow) =>
+    const setValueMethod = (i: number, isCompleteRow: boolean) =>
         isSquareFill && isCompleteRow
             ? setIsValueForCompleteRow(i, value, squareProps)
             : squareProps?.e

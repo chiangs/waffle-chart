@@ -8,7 +8,6 @@ import WaffleChart from './WaffleChart';
 describe('Integration test', () => {
     afterEach(cleanup);
     const DEFAULT_PROPS = {};
-    const TESTID_COMPONENT = 'waffle-chart-container';
     const TESTID_SQUARE = 'chart-square';
     const TESTID_DISPLAY_CONTAINER = 'display-container';
     const TESTID_DISPLAY_ITEM = 'display-item';

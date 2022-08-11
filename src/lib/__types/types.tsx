@@ -21,3 +21,21 @@ export interface DataDisplayProps {
     dataLabel: string;
     color?: string;
 }
+
+export type WaffleChartProps = {
+    partA?: number;
+    partB?: number;
+    partAlabel?: string;
+    partBlabel?: string;
+    rounding?: Rounding;
+    isFilledFromTop?: boolean;
+    isFrilledFromLeft?: boolean;
+    isSquareFill?: boolean;
+    isAnimatedFill?: boolean;
+    showDataDisplay?: boolean;
+    showTotal?: boolean;
+    partAColor?: string;
+    partBColor?: string;
+    totalColor?: string;
+    clickHandler?: (props: GridItemProps) => GridItemProps;
+};

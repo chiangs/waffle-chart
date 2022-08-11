@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { describe, expect, test } from 'vitest';
-import Chart from './index';
+import Chart from '.';
 
 describe('Chart', () => {
     test('Chart component renders correctly', () => {

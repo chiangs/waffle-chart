@@ -20,7 +20,8 @@
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react-jsx"
     },
     "include": [
         "src/**/*.ts",
@@ -29,5 +30,5 @@
         "tests/**/*.ts",
         "tests/**/*.tsx"
     ],
-    "exclude": ["node_modules", "dist", "test"]
+    "exclude": ["node_modules", "dist", "test", "/public"]
 }

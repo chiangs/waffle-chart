@@ -3,11 +3,13 @@
   - [Demo](#demo)
   - [Supporting reads](#supporting-reads)
   - [API](#api)
-    - [Square vs Linear fill](#square-vs-linear-fill)
+    - [Square vs linear fill](#square-vs-linear-fill)
     - [Directional filling](#directional-filling)
     - [Total and Data Display](#total-and-data-display)
     - [Colors](#colors)
+    - [Fonts and other styling](#fonts-and-other-styling)
   - [Installing](#installing)
+    - [Usage](#usage)
   - [Contributing](#contributing)
   - [Developing](#developing)
     - [Testing](#testing)
@@ -31,12 +33,12 @@ Pies and donuts are harder to read, take longer to evaluate the meaning behind t
 Waffle charts can display more in the same amount of space at a larger, easier to read size. It provides a better graphical and textual representation of proportions.Thanks to a 10 x 10 grid, the user can quickly assess the overall portions and then drill down to the 1%.
 
 <p>
-  <img src="/public/donut.svg?sanitize=true" alt="donut" width="300"/>
+  <img src="/assets/donut.svg?sanitize=true" alt="donut" width="300"/>
   &nbsp;
   &nbsp;
   &nbsp;
   &nbsp;
-  <img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
+  <img src="/assets/waffle.svg?sanitize=true" alt="waffle chart" width="300">
 </p>
 
 So let's improve your dashboard of hard-to-read pie charts that are insufficient in truly representing proportions.
@@ -64,10 +66,6 @@ Live demo via Storybook [coming soon]().
 - [📄 Your Dashboard Needs a Waffle Chart](https://aptitive.com/blog/your-dashboard-needs-a-waffle-chart/)
 
 
-Ref text
-
-technologies
-
 ## API
 
 The chart will render with just the default props.
@@ -89,24 +87,24 @@ The chart will render with just the default props.
 | partBColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
 | totalColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
 
-### Square vs Linear fill
+### Square vs linear fill
 
 Square (default) fill will fill `partA` values in a square shape with any remainders above on the next row. Linear will fill the entire row first then move onto the next row. Square fill is slightly more logic, but performance difference shouldn't be noticeable.
 
 <p>
-  <img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
+  <img src="/assets/waffle.svg?sanitize=true" alt="waffle chart" width="300">
     &nbsp;
     &nbsp;
     &nbsp;
     &nbsp;
-  <img src="/public/waffle-linear.svg?sanitize=true" alt="linear fill" width="300"/>
+  <img src="/assets/waffle-linear.svg?sanitize=true" alt="linear fill" width="300"/>
 </p>
 
 ### Directional filling
 
 Toggling the vertical and horizontal fill directions will change the position where `partA` value fills from. The label will follow the vertical fill setting.
 
-<img src="/public/waffle-vertical.svg?sanitize=true" alt="waffle chart vertical fill" width="300">
+<img src="/assets/waffle-vertical.svg?sanitize=true" alt="waffle chart vertical fill" width="300">
   
 ### Total and Data Display
 
@@ -122,6 +120,10 @@ You can pass in colors via props or just override in `:root` or some scope above
 
 The fallbacks were chosen as they satisfy color contrast accessibility for both white and black backgrounds according to **WCAG AA** standards for _Large Text, UI Components, & Graphical Objects_.
 
+### Fonts and other styling
+
+The component will inherit the font from your app or can be modified by selecting it's class. Additional special stylings can be applied by selecting the right classes.
+
 ## Installing
 
 Using `NPM`:
@@ -134,6 +136,39 @@ Using `Yarn`:
 
 ```bash
 yarn add waffle-chart
+```
+
+### Usage
+
+I recommend as a practice to wrap components like this in your own wrapper component that exposes the same API. This way you aren't married to this library and can easily swap it out without breaking consumers of your component.
+
+```ts
+// Import the CSS at the highest scope possible without coupling e.g. Shared or Vendor or Lib directory.
+import 'node_modules/waffle-chart/dist/style.css';
+```
+
+```ts
+import type { WaffleChartProps } from 'waffle-chart';
+import { WaffleChart } from 'waffle-chart';
+
+type Props = WaffleChartProps;
+
+const MyChart: React.FC<Props> = (props: Props) => <WaffleChart {...props}/>
+
+export default MyChart;
+```
+
+For Remix projects just import the style url in the `links` at the `root.tsx`.
+
+```ts
+import waffleChartStylesUrl from 'node_modules/waffle-chart/dist/style.css';
+
+export const links: LinksFunction = () => [
+    {
+        rel: 'stylesheet',
+        href: waffleChartStylesUrl,
+    },
+];
 ```
 
 ## Contributing
