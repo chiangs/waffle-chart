@@ -36,7 +36,7 @@ There, I said it...and it's true.
 
 Pies and donuts are harder to read, take longer to evaluate the meaning behind the visualization, and tend to take up more space.
 
-Waffle charts can display more in the same amount of space at a larger, easier to read size. It provides a better graphical and textual representation of proportions.Thanks to a 10 x 10 grid, the user can quickly assess the overall portions and then drill down to the 1%.
+Waffle charts can display more in the same amount of space at a larger, easier to read size. It provides a better graphical and textual representation of proportions. Thanks to a 10 x 10 grid, the user can quickly assess the overall portions and then drill down to the 1%.
 
 <p>
   <img src="/assets/donut.svg?sanitize=true" alt="donut" width="300"/>
@@ -47,9 +47,7 @@ Waffle charts can display more in the same amount of space at a larger, easier t
   <img src="/assets/waffle.svg?sanitize=true" alt="waffle chart" width="300">
 </p>
 
-So let's improve your dashboard of hard-to-read pie charts that are insufficient in truly representing proportions.
-
-This is a zero-dependency waffle chart built with React, Typescript & Vite. 
+This is a zero-dependency library built with React, Typescript & Vite. 
 
 No `D3` only `HTML`, `CSS`, and `JS/TS`.
 
