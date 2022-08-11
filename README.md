@@ -15,6 +15,7 @@
     - [Fonts and other styling](#fonts-and-other-styling)
   - [Installing](#installing)
     - [Usage](#usage)
+    - [Updating](#updating)
   - [Contributing](#contributing)
   - [Developing](#developing)
     - [Testing](#testing)
@@ -84,7 +85,7 @@ The chart will render with just the default props.
 | Prop              | Type                    | Default   | Notes |
 |-------------------|-------------------------|-----------|-------|
 | partA             | number                  | 0         | this is the quantity, % is calculated by component |
-| partB             | number                  | 100       | this is the quantity, % is calculated by component |
+| partB             | number                  | 0         | this is the quantity, % is calculated by component |
 | partAlabel        | string                  | 'count'   |       |
 | partBlabel        | string                  | 'count'   |       |
 | rounding          | 'nearest', 'up', 'down' | 'nearest' | up for any amount over the whole, down if under a whole      |
@@ -182,6 +183,19 @@ export const links: LinksFunction = () => [
 ];
 ```
 
+### Updating
+
+npm 
+
+```bash
+npm update
+```
+
+yarn
+
+```bash
+yarn upgrade waffle-chart@^
+```
 ## Contributing
 
 This package is free for you to clone and change to your needs in accordance with the MIT license terms. If you want to contribute back to this codebase for improvements, please fork it, create an issue and then initiate a pull request that details the changes and problem or enhancement. Thanks! 🍻
@@ -201,36 +215,32 @@ Testing methodology follows the testing-library guiding principles and focusing 
 Latest coverage report:
 
 ```
-Test Files  4 passed (4)
-     Tests  11 passed (11)
-  Start at  10:54:55
-  Duration  2.31s (setup 1ms, collect 669ms, tests 285ms)
+Test Files  5 passed (5)
+     Tests  12 passed (12)
+  Start at  22:40:55
+  Duration  2.30s (setup 1ms, collect 797ms, tests 271ms)
 
-------------------|---------|----------|---------|---------|-------------------
-File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
-------------------|---------|----------|---------|---------|-------------------
-All files         |   98.94 |    82.66 |   95.45 |   98.94 |
- lib              |     100 |      100 |     100 |     100 |
-  index.tsx       |     100 |      100 |     100 |     100 |
- lib/Chart        |     100 |      100 |     100 |     100 |
-  Chart.tsx       |     100 |      100 |     100 |     100 |
-  index.tsx       |     100 |      100 |     100 |     100 |
- lib/DataDisplay  |     100 |      100 |     100 |     100 |
-  DataDisplay.tsx |     100 |      100 |     100 |     100 |
-  index.tsx       |     100 |      100 |     100 |     100 |
- lib/Total        |     100 |      100 |     100 |     100 |
-  Total.tsx       |     100 |      100 |     100 |     100 |
-  index.ts        |     100 |      100 |     100 |     100 |
- lib/WaffleChart  |    98.5 |    78.68 |    92.3 |    98.5 |
-  WaffleChart.tsx |   98.49 |    78.33 |   91.66 |   98.49 | 46-47,118-119
-  index.tsx       |     100 |      100 |     100 |     100 |
-------------------|---------|----------|---------|---------|-------------------
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------|---------|----------|---------|---------|-------------------
+All files    |   98.89 |    87.05 |   94.44 |   98.89 |                   
+ Chart       |     100 |      100 |     100 |     100 | 
+  index.tsx  |     100 |      100 |     100 |     100 | 
+ DataDisplay |     100 |      100 |     100 |     100 | 
+  index.tsx  |     100 |      100 |     100 |     100 | 
+ Total       |     100 |      100 |     100 |     100 | 
+  index.tsx  |     100 |      100 |     100 |     100 | 
+ WaffleChart |   98.41 |     84.5 |   91.66 |   98.41 | 
+  index.tsx  |   98.41 |     84.5 |   91.66 |   98.41 | 31-32,103-104    
+-------------|---------|----------|---------|---------|-------------------
 ```
 
 Testing is built and run with:
 
 - [Vitest](https://vitest.dev/)
 - [React-Testing-Library](https://testing-library.com/)
+
+You'll notice very sparse snapshots for each component and a focus on the integrations.
 
 Run tests once:
 

@@ -9,6 +9,7 @@ type Props = {
     verticalFill: VerticalFill;
     horizontalFill: HorizontalFill;
     isAnimatedFill: boolean;
+    isZeros: boolean;
     clickHandler: (props: GridItemProps) => GridItemProps;
 };
 
@@ -19,6 +20,7 @@ const Chart: React.FC<Props> = ({
     verticalFill,
     horizontalFill,
     isAnimatedFill,
+    isZeros,
     clickHandler,
 }: Props) => {
     // Create UIs
@@ -26,7 +28,7 @@ const Chart: React.FC<Props> = ({
         const classes = [`waffle-chart-square`];
         if (props.isValue) classes.push(`valued`);
         if (isAnimatedFill) classes.push(`animate-fill`);
-
+        if (isZeros) classes.push('zeroed');
         return (
             <div
                 data-testid='chart-square'

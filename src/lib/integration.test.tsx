@@ -33,11 +33,11 @@ describe('Integration test', () => {
             partAlabel,
             partBlabel,
         };
-        const partApercentage = (partA / partB) * 100;
+        let partApercentage = 20;
         const partAcount = `${partA} ${partAlabel}`;
         const partBpercentage = 100 - partApercentage;
         const partBcount = `${partB} ${partBlabel}`;
-        const { queryAllByTestId, getByTestId } = render(
+        const { rerender, queryAllByTestId, getByTestId } = render(
             <WaffleChart {...props} />
         );
         const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
@@ -52,6 +52,9 @@ describe('Integration test', () => {
         screen.getByText(`${partBpercentage}%`);
         screen.getByText(partAcount);
         screen.getByText(partBcount);
+        rerender(<WaffleChart partA={4} partB={2} />);
+        partApercentage = 33;
+        screen.getByText(`${partApercentage}%`);
     });
 
     test('Expect chart to colorize the number of squares equal to partA value', () => {
@@ -75,10 +78,10 @@ describe('Integration test', () => {
         const partAsquares = squares.filter((s) =>
             s.className.includes(CLASS_FILLED)
         );
-        expect(partAsquares.length).toBe(25);
+        expect(partAsquares.length).toBe(20);
         expect(displayContainer).toBeTruthy();
-        screen.getByText('25%');
-        screen.getByText('75%');
+        screen.getByText('20%');
+        screen.getByText('80%');
     });
 
     test('Click on chart square triggers click function when provided in prop', async () => {
@@ -99,10 +102,10 @@ describe('Integration test', () => {
     });
 
     test('Rounding method selection reflect number of squares filled', () => {
-        const getPartASquares = (collection) =>
+        const getPartASquares = (collection: HTMLElement[]) =>
             collection.filter((s) => s.className.includes(CLASS_FILLED));
-        const partA = 95.5;
-        const partB = 100;
+        const partA = 191;
+        const partB = 9;
         const defaultAndUpRoundingCount = 96;
         const downRounding = 95;
         const props = { ...DEFAULT_PROPS, partA, partB };
@@ -181,6 +184,7 @@ describe('Integration test', () => {
         const invalidSquareFill = {
             ...DEFAULT_PROPS,
             partA: 2,
+            partB: 80,
         };
         rerender(<WaffleChart {...invalidSquareFill} />);
         const indexesWithInvalidSquareFill = getFilledSquareIndexes(
@@ -192,9 +196,10 @@ describe('Integration test', () => {
     });
 
     test('Displays total amount', () => {
+        const partA = 10;
         const props = {
             ...DEFAULT_PROPS,
-            partA: 10,
+            partA,
         };
         const propsWithTotal = {
             ...props,
@@ -202,8 +207,5 @@ describe('Integration test', () => {
         };
         render(<WaffleChart {...propsWithTotal} />);
         screen.getByTestId('total');
-        screen.getByRole('heading', {
-            name: /110/i,
-        });
     });
 });

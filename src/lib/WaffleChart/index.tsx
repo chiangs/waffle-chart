@@ -177,7 +177,7 @@ const calcTotal = (a: number, b: number): number => a + b;
 
 const WaffleChart: React.FC<Props> = ({
     partA = 0,
-    partB = 100,
+    partB = 0,
     partAlabel = 'count',
     partBlabel = 'count',
     rounding = 'nearest',
@@ -196,7 +196,7 @@ const WaffleChart: React.FC<Props> = ({
     const bgPartBstyle = partBColor ? { background: partBColor } : undefined;
     const totalStyle = totalColor ? { color: totalColor } : undefined;
     // Calculate value
-    const percentage = (partA / partB) * 100;
+    const percentage = (partA / (partA + partB)) * 100;
     const rounded = percentage > 100 ? 100 : round(percentage, rounding);
     const verticalFill: VerticalFill = isFilledFromTop ? 'top' : 'bottom';
     const horizontalFill: HorizontalFill = isFrilledFromLeft ? 'left' : 'right';
@@ -241,6 +241,7 @@ const WaffleChart: React.FC<Props> = ({
                 verticalFill={verticalFill}
                 horizontalFill={horizontalFill}
                 isAnimatedFill={isAnimatedFill}
+                isZeros={!partA && !partB}
                 clickHandler={onItemClick}
             />
             {dataDisplay}

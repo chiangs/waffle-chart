@@ -51,6 +51,10 @@
     transition: background 0.3s ease-in-out;
 }
 
+.waffle-chart-square.zeroed:not(.valued) {
+    background: var(--bg-fallback-total);
+}
+
 .waffle-chart-square.valued {
     background: var(--bg-square-valued, var(--bg-fallback-valued));
 }

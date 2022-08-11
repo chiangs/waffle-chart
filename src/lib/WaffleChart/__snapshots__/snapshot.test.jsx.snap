@@ -10,601 +10,601 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
     data-testid="chart-container"
   >
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square100"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square99"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square98"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square97"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square96"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square95"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square94"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square93"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square92"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square91"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square90"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square89"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square88"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square87"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square86"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square85"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square84"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square83"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square82"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square81"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square80"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square79"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square78"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square77"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square76"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square75"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square74"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square73"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square72"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square71"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square70"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square69"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square68"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square67"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square66"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square65"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square64"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square63"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square62"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square61"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square60"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square59"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square58"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square57"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square56"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square55"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square54"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square53"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square52"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square51"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square50"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square49"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square48"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square47"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square46"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square45"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square44"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square43"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square42"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square41"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square40"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square39"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square38"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square37"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square36"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square35"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square34"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square33"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square32"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square31"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square30"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square29"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square28"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square27"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square26"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square25"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square24"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square23"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square22"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square21"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square20"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square19"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square18"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square17"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square16"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square15"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square14"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square13"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square12"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square11"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square10"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square9"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square8"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square7"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square6"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square5"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square4"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square3"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square2"
     />
     <div
-      className="waffle-chart-square animate-fill"
+      className="waffle-chart-square animate-fill zeroed"
       data-testid="chart-square"
       onClick={[Function]}
       title="square1"
@@ -652,14 +652,14 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
         className="display-item-title"
         data-testid="display-percentage"
       >
-        100
+        0
         %
       </h3>
       <p
         className="display-item-description"
         data-testid="display-count"
       >
-        100
+        0
          
         count
       </p>
