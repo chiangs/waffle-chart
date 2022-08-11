@@ -56,6 +56,8 @@ No `D3` only `HTML`, `CSS`, and `JS/TS`.
 
 If you are using this in a commercial project, please consider leaving a donation/tip. Cheers!
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M1EC8PM)
+
 ## Limitations
 
 - Requires browser support for CSS `grid` and `flexbox`.
