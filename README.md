@@ -160,7 +160,7 @@ import 'node_modules/waffle-chart/dist/style.css';
 ```
 
 ```ts
-import type { WaffleChartProps } from 'waffle-chart/dist/src/lib/__types';
+import type { WaffleChartProps } from 'waffle-chart';
 import { WaffleChart } from 'waffle-chart';
 
 type Props = WaffleChartProps;
