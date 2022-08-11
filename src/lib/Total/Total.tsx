@@ -1,12 +1,13 @@
 import React from 'react';
 
 type Props = {
+    style: {} | undefined;
     children: any;
 };
 
-const Total: React.FC<Props> = (props: Props) => (
-    <h3 className='total' data-testid='total'>
-        {props.children}
+const Total: React.FC<Props> = ({ style = undefined, children }) => (
+    <h3 className='total' style={style} data-testid='total'>
+        {children}
     </h3>
 );
 

@@ -1,9 +1,15 @@
 - [Introduction](#introduction)
+    - [Limitations](#limitations)
+  - [Demo](#demo)
   - [Supporting reads](#supporting-reads)
   - [API](#api)
+    - [Square vs Linear fill](#square-vs-linear-fill)
+    - [Directional filling](#directional-filling)
+    - [Total and Data Display](#total-and-data-display)
+    - [Colors](#colors)
   - [Installing](#installing)
   - [Contributing](#contributing)
-    - [Developing](#developing)
+  - [Developing](#developing)
     - [Testing](#testing)
     - [Building](#building)
     - [Merging](#merging)
@@ -20,13 +26,33 @@ As an American assimilating into Norway and the way of life, I'd like to think N
 
 There, I said it...and it's true.
 
-Pies and donuts are harder to read, take longer to evaluate and grasp the proportions and meaning behind the visualization and tend to take up more space.
+Pies and donuts are harder to read, take longer to evaluate the meaning behind the visualization, and tend to take up more space.
 
-<img src="/public/donut.svg?sanitize=true" alt="donut" width="300"/>
-<img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
+Waffle charts can display more in the same amount of space at a larger, easier to read size. It provides a better graphical and textual representation of proportions.Thanks to a 10 x 10 grid, the user can quickly assess the overall portions and then drill down to the 1%.
+
+<p>
+  <img src="/public/donut.svg?sanitize=true" alt="donut" width="300"/>
+  &nbsp;
+  ➡️
+  &nbsp;
+  <img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
+</p>
 
 So let's improve your dashboard of hard-to-read pie charts that are insufficient in truly representing proportions.
 
+This is a zero-dependency waffle chart built with React, Typescript & Vite. 
+
+No `D3` only `HTML`, `CSS`, and `JS/TS`.
+
+### Limitations
+
+- Requires browser support for CSS `grid` and `flexbox`.
+- Requires browser support for CSS `clamp()`.
+- Currently only available for two values _(good candidate for next version)_.
+
+## Demo
+
+Live demo via Storybook [coming soon]().
 
 ## Supporting reads
 
@@ -36,7 +62,6 @@ So let's improve your dashboard of hard-to-read pie charts that are insufficient
 - [📄 Waffles vs Pies - A visualization showdown!](https://www.barefootdatascience.com/2017/09/17/waffle-vs-pie-a-visualization-showdown/)
 - [📄 Your Dashboard Needs a Waffle Chart](https://aptitive.com/blog/your-dashboard-needs-a-waffle-chart/)
 
-Turn your hard-to-read and unhelpful pie / donut charts into a more user-friendly waffle-chart.
 
 Ref text
 
@@ -44,7 +69,56 @@ technologies
 
 ## API
 
-Table
+The chart will render with just the default props.
+
+| Prop              | Type                    | Default   | Notes |
+|-------------------|-------------------------|-----------|-------|
+| partA             | number                  | 0         | this is the quantity, % is calculated by component |
+| partB             | number                  | 100       | this is the quantity, % is calculated by component |
+| partAlabel        | string                  | 'count'   |       |
+| partBlabel        | string                  | 'count'   |       |
+| rounding          | 'nearest', 'up', 'down' | 'nearest' | up for any amount over the whole, down if under a whole      |
+| isFilledFromTop   | boolean                 | false     |       |
+| isFrilledFromLeft | boolean                 | false     |       |
+| isSquareFill      | boolean                 | true      | can fill in linear by row if false |
+| isAnimatedFill    | boolean                 | true      | fade in color vs. instant change   |
+| showDataDisplay   | boolean                 | true      |       |
+| showTotal         | boolean                 | false     |       |
+| partAColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
+| partBColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
+| totalColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
+
+### Square vs Linear fill
+
+Square (default) fill will fill `partA` values in a square shape with any remainders above on the next row. Linear will fill the entire row first then move onto the next row. Square fill is slightly more logic, but performance difference shouldn't be noticeable.
+
+<p>
+  <img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
+    &nbsp;
+    ➡️
+    &nbsp;
+  <img src="/public/waffle-linear.svg?sanitize=true" alt="linear fill" width="300"/>
+</p>
+
+### Directional filling
+
+Toggling the vertical and horizontal fill directions will change the position where `partA` value fills from. The label will follow the vertical fill setting.
+
+<img src="/public/waffle-vertical.svg?sanitize=true" alt="waffle chart vertical fill" width="300">
+  
+### Total and Data Display
+
+Toggling these values will show/hide the calculations for total and percentages/counts.
+
+### Colors
+
+You can pass in colors via props or just override in `:root` or some scope above the component for the following:
+
+- `--bg-total`: color for **total**, the fallback is `slategray`
+- `--bg-square`: color for **partB** squares, the fallback is `cadetblue`
+- `--bg-square-valued`: color for **partA** squares, the fallback is `palevioletred`
+
+The fallbacks were chosen as they satisfy color contrast accessibility for both white and black backgrounds according to **WCAG AA** standards for _Large Text, UI Components, & Graphical Objects_.
 
 ## Installing
 
@@ -62,12 +136,48 @@ yarn add waffle-chart
 
 ## Contributing
 
-This package is free for you to clone and change to your needs. If you want to contribute back to this codebase for improvements, please fork it and then initiate a pull request that details the changes and problem or enhancement. Thanks! 🍻
+This package is free for you to clone and change to your needs in accordance with the MIT license terms. If you want to contribute back to this codebase for improvements, please fork it, create an issue and then initiate a pull request that details the changes and problem or enhancement. Thanks! 🍻
 
-### Developing
+## Developing
+
+Starting development server:
+
+```bash
+yarn dev
+```
+
 ### Testing
 
 Testing methodology follows the testing-library guiding principles and focusing user interactions and integration testing.
+
+Latest coverage report:
+
+```
+Test Files  4 passed (4)
+     Tests  11 passed (11)
+  Start at  10:54:55
+  Duration  2.31s (setup 1ms, collect 669ms, tests 285ms)
+
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+------------------|---------|----------|---------|---------|-------------------
+All files         |   98.94 |    82.66 |   95.45 |   98.94 |
+ lib              |     100 |      100 |     100 |     100 |
+  index.tsx       |     100 |      100 |     100 |     100 |
+ lib/Chart        |     100 |      100 |     100 |     100 |
+  Chart.tsx       |     100 |      100 |     100 |     100 |
+  index.tsx       |     100 |      100 |     100 |     100 |
+ lib/DataDisplay  |     100 |      100 |     100 |     100 |
+  DataDisplay.tsx |     100 |      100 |     100 |     100 |
+  index.tsx       |     100 |      100 |     100 |     100 |
+ lib/Total        |     100 |      100 |     100 |     100 |
+  Total.tsx       |     100 |      100 |     100 |     100 |
+  index.ts        |     100 |      100 |     100 |     100 |
+ lib/WaffleChart  |    98.5 |    78.68 |    92.3 |    98.5 |
+  WaffleChart.tsx |   98.49 |    78.33 |   91.66 |   98.49 | 46-47,118-119
+  index.tsx       |     100 |      100 |     100 |     100 |
+------------------|---------|----------|---------|---------|-------------------
+```
 
 Testing is built and run with:
 
@@ -105,3 +215,5 @@ yarn build
 ```
 
 ### Merging
+
+See [Contributing](#contributing).

@@ -25,6 +25,7 @@ type Props = {
     showTotal?: boolean;
     partAColor?: string;
     partBColor?: string;
+    totalColor?: string;
     clickHandler?: (props: GridItemProps) => GridItemProps;
 };
 
@@ -203,10 +204,12 @@ const WaffleChart: React.FC<Props> = ({
     showTotal = false,
     partAColor = undefined,
     partBColor = undefined,
+    totalColor = undefined,
     clickHandler = (props) => props,
 }: Props) => {
     const bgPartAstyle = partAColor ? { background: partAColor } : undefined;
     const bgPartBstyle = partBColor ? { background: partBColor } : undefined;
+    const totalStyle = totalColor ? { color: totalColor } : undefined;
     // Calculate value
     const percentage = (partA / partB) * 100;
     const rounded = percentage > 100 ? 100 : round(percentage, rounding);
@@ -217,7 +220,9 @@ const WaffleChart: React.FC<Props> = ({
     // Create display prop collection
     let dataDisplay;
     const total = calcTotal(partA, partB);
-    const totalDisplay = showTotal ? <Total>{total}</Total> : null;
+    const totalDisplay = showTotal ? (
+        <Total style={totalStyle}>{total}</Total>
+    ) : null;
     if (showDataDisplay) {
         const { data1Props, data2Props } = createDisplayProps(
             partA,
