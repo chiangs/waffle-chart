@@ -33,7 +33,8 @@ Waffle charts can display more in the same amount of space at a larger, easier t
 <p>
   <img src="/public/donut.svg?sanitize=true" alt="donut" width="300"/>
   &nbsp;
-  ➡️
+  &nbsp;
+  &nbsp;
   &nbsp;
   <img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
 </p>
@@ -95,7 +96,8 @@ Square (default) fill will fill `partA` values in a square shape with any remain
 <p>
   <img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
     &nbsp;
-    ➡️
+    &nbsp;
+    &nbsp;
     &nbsp;
   <img src="/public/waffle-linear.svg?sanitize=true" alt="linear fill" width="300"/>
 </p>
