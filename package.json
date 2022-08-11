@@ -9,6 +9,8 @@
         "chart",
         "pie"
     ],
+    "homepage": "https://github.com/chiangs/waffle-chart/README.md",
+    "repository": "github:chiangs/waffle-chart.git",
     "files": [
         "dist",
         "README.md"
