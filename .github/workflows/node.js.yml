@@ -27,7 +27,6 @@ jobs:
                   cache: 'yarn'
             - run: yarn install --frozen-lockfile --immutable
             - run: yarn test
-            - run: yarn build
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
             - uses: actions/setup-node@v3
