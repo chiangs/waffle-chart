@@ -1,8 +1,6 @@
 import React from 'react';
-import { WaffleChart } from './lib/index';
+import WaffleChart from './lib/WaffleChart';
 
-const App = () => {
-    return <WaffleChart />;
-};
+const App = () => <WaffleChart />;
 
 export default App;

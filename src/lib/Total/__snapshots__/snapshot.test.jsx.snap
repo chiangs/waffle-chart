@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`DataDisplay > DataDisplay component renders correctly 1`] = `
+<h3
+  className="total"
+  data-testid="total"
+/>
+`;

@@ -3,7 +3,7 @@ import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi, describe, expect, test, afterEach } from 'vitest';
 import type { GridItemProps } from './__types';
-import { WaffleChart } from './index';
+import WaffleChart from './WaffleChart';
 
 describe('Integration test', () => {
     afterEach(cleanup);
