@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     build: {
         lib: {
-            entry: path.resolve(__dirname, 'src/lib/index.jsx'),
+            entry: path.resolve(__dirname, 'src/lib/index.tsx'),
             name: 'WaffleChart',
             fileName: (format) => `waffle-chart.${format}.js`,
         },
