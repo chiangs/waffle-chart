@@ -27,7 +27,7 @@ jobs:
                       ${{ runner.os }}-yarn-
 
             - run: yarn
-            - run: yarn publish --access public
+            - run: yarn publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
 
