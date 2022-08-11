@@ -9,7 +9,7 @@
         "chart",
         "pie"
     ],
-    "homepage": "https://github.com/chiangs/waffle-chart/README.md",
+    "homepage": "https://github.com/chiangs/waffle-chart/blob/main/README.md",
     "repository": "github:chiangs/waffle-chart.git",
     "private": false,
     "publishConfig": {
