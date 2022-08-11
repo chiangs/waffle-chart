@@ -1,6 +1,6 @@
 {
     "name": "waffle-chart",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "waffle-chart",
     "author": "chiangs",
     "license": "MIT",
@@ -55,6 +55,7 @@
             "sourceType": "module"
         }
     },
+    "typings": "dist/src/index.d.ts",
     "devDependencies": {
         "@testing-library/dom": "^8.16.1",
         "@testing-library/react": "^13.3.0",

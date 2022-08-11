@@ -16,7 +16,7 @@
         "paths": {
             "@/*": ["src/*"]
         },
-        "types": ["jest", "vitest/globals"],
+        "types": ["vitest/globals"],
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "skipLibCheck": true,
