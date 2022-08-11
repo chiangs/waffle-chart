@@ -141,7 +141,7 @@ describe('Integration test', () => {
         };
         const partA = 7;
         const partB = 100;
-        const defaultIndexes = [
+        const linearIndexes = [
             `square7`,
             `square6`,
             `square5`,
@@ -160,27 +160,28 @@ describe('Integration test', () => {
             `square1`,
         ];
         const propsDefaultFill = { ...DEFAULT_PROPS, partA, partB };
-        const propsSquareFill = { ...propsDefaultFill, isSquareFill: true };
+        const propsLinearFill = { ...propsDefaultFill, isSquareFill: false };
         const { rerender, getByTestId, getAllByTestId } = render(
             <WaffleChart {...propsDefaultFill} />
         );
         const displayContainer = getByTestId(TESTID_DISPLAY_CONTAINER);
         expect(displayContainer).toBeTruthy();
-        const indexesWithDefaultFill = getFilledSquareIndexes(
+        // Linear row fill
+        const indexesWithLineartFill = getFilledSquareIndexes(
             getAllByTestId(TESTID_SQUARE)
         );
-        expect(indexesWithDefaultFill).toStrictEqual(defaultIndexes);
-        rerender(<WaffleChart {...propsSquareFill} />);
+        expect(indexesWithLineartFill).toStrictEqual(squareIndexes);
+        // Square fill
+        rerender(<WaffleChart {...propsLinearFill} />);
         const indexesWithSquareFill = getFilledSquareIndexes(
             getAllByTestId(TESTID_SQUARE)
         );
-        expect(indexesWithSquareFill).toStrictEqual(squareIndexes);
+        expect(indexesWithSquareFill).toStrictEqual(linearIndexes);
         // Change props to where square and remainder doesn't make sense
         const invalidSquareFillIndexes = [`square2`, `square1`];
         const invalidSquareFill = {
             ...DEFAULT_PROPS,
             partA: 2,
-            isSquareFill: true,
         };
         rerender(<WaffleChart {...invalidSquareFill} />);
         const indexesWithInvalidSquareFill = getFilledSquareIndexes(
@@ -189,5 +190,21 @@ describe('Integration test', () => {
         expect(indexesWithInvalidSquareFill).toStrictEqual(
             invalidSquareFillIndexes
         );
+    });
+
+    test('Displays total amount', () => {
+        const props = {
+            ...DEFAULT_PROPS,
+            partA: 10,
+        };
+        const propsWithTotal = {
+            ...props,
+            showTotal: true,
+        };
+        render(<WaffleChart {...propsWithTotal} />);
+        screen.getByTestId('total');
+        screen.getByRole('heading', {
+            name: /110/i,
+        });
     });
 });

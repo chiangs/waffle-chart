@@ -9,7 +9,7 @@ type Props = {
     verticalFill: VerticalFill;
     horizontalFill: HorizontalFill;
     isAnimatedFill: boolean;
-    clickHandler?: (props: GridItemProps) => GridItemProps | null;
+    clickHandler: (props: GridItemProps) => GridItemProps;
 };
 
 const Chart: React.FC<Props> = ({
@@ -21,10 +21,6 @@ const Chart: React.FC<Props> = ({
     isAnimatedFill,
     clickHandler,
 }: Props) => {
-    // Click handler
-    const onItemClick = (props: GridItemProps) =>
-        clickHandler ? clickHandler(props) : null;
-
     // Create UIs
     const gridItem = (props: GridItemProps) => {
         const classes = [`waffle-chart-square`];
@@ -38,7 +34,7 @@ const Chart: React.FC<Props> = ({
                 style={props.isValue ? bgValuedStyle : bgDefaultStyle}
                 key={props.index}
                 title={`square${props.index}`}
-                onClick={() => onItemClick(props)}></div>
+                onClick={() => clickHandler(props)}></div>
         );
     };
     const grid = itemProps.map((p) => gridItem(p));

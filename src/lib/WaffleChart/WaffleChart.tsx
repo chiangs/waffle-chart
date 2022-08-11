@@ -9,6 +9,7 @@ import type {
 } from '../__types';
 import { Chart } from '../Chart';
 import { DataDisplay } from '../DataDisplay';
+import { Total } from '../Total';
 
 type Props = {
     partA?: number;
@@ -21,6 +22,7 @@ type Props = {
     isSquareFill?: boolean;
     isAnimatedFill?: boolean;
     showDataDisplay?: boolean;
+    showTotal?: boolean;
     partAColor?: string;
     partBColor?: string;
     clickHandler?: (props: GridItemProps) => GridItemProps;
@@ -185,6 +187,8 @@ const createDisplayProps = (
     return { data1Props, data2Props };
 };
 
+const calcTotal = (a: number, b: number): number => a + b;
+
 const WaffleChart: React.FC<Props> = ({
     partA = 0,
     partB = 100,
@@ -193,12 +197,13 @@ const WaffleChart: React.FC<Props> = ({
     rounding = 'nearest',
     isFilledFromTop = false,
     isFrilledFromLeft = false,
-    isSquareFill = false,
+    isSquareFill = true,
     isAnimatedFill = true,
     showDataDisplay = true,
+    showTotal = false,
     partAColor = undefined,
     partBColor = undefined,
-    clickHandler = undefined,
+    clickHandler = (props) => props,
 }: Props) => {
     const bgPartAstyle = partAColor ? { background: partAColor } : undefined;
     const bgPartBstyle = partBColor ? { background: partBColor } : undefined;
@@ -211,6 +216,8 @@ const WaffleChart: React.FC<Props> = ({
     const itemProps = createPropsCollection(rounded, isSquareFill);
     // Create display prop collection
     let dataDisplay;
+    const total = calcTotal(partA, partB);
+    const totalDisplay = showTotal ? <Total>{total}</Total> : null;
     if (showDataDisplay) {
         const { data1Props, data2Props } = createDisplayProps(
             partA,
@@ -230,13 +237,13 @@ const WaffleChart: React.FC<Props> = ({
         );
     }
     // Click handler
-    const onItemClick = (props: GridItemProps) =>
-        clickHandler && props.isValue ? clickHandler(props) : null;
+    const onItemClick = (props: GridItemProps) => clickHandler(props);
 
     return (
         <div
             className='waffle-chart-container'
             data-testid='waffle-chart-container'>
+            {totalDisplay}
             <Chart
                 bgDefaultStyle={bgPartBstyle}
                 bgValuedStyle={bgPartAstyle}
