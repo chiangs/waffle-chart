@@ -183,8 +183,8 @@ All files         |   98.94 |    82.66 |   95.45 |   98.94 |
 
 Testing is built and run with:
 
-- [Vitest]()
-- [React-Testing-Library]()
+- [Vitest](https://vitest.dev/)
+- [React-Testing-Library](https://testing-library.com/)
 
 Run tests once:
 
