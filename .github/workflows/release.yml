@@ -27,7 +27,7 @@ jobs:
                       ${{ runner.os }}-yarn-
 
             - run: yarn
-            - run: npm publish --access public
+            - run: yarn publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
 
@@ -35,6 +35,6 @@ jobs:
               with:
                   registry-url: 'https://npm.pkg.github.com'
 
-            - run: npm publish
+            - run: yarn publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
