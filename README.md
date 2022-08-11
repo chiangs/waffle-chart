@@ -22,8 +22,8 @@ There, I said it...and it's true.
 
 Pies and donuts are harder to read, take longer to evaluate and grasp the proportions and meaning behind the visualization and tend to take up more space.
 
-<img src="/public/donut.svg?sanitize=true" alt="donut"/>
-<img src="/public/waffle.png?sanitize=true" alt="waffle chart">
+<img src="/public/donut.svg?sanitize=true" alt="donut" width="300"/>
+<img src="/public/waffle.svg?sanitize=true" alt="waffle chart" width="300">
 
 So let's improve your dashboard of hard-to-read pie charts that are insufficient in truly representing proportions.
 
