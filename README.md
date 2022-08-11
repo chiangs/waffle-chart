@@ -1,4 +1,4 @@
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chiangs/waffle-chart/Node.js%20CI/main?style=for-the-badge)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chiangs/waffle-chart/Release?style=for-the-badge)
 ![GitHub all releases](https://img.shields.io/github/downloads/chiangs/waffle-chart/total?style=for-the-badge)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/chiangs/waffle-chart?style=for-the-badge)
 
