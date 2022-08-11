@@ -27,6 +27,7 @@ jobs:
                       ${{ runner.os }}-yarn-
 
             - run: yarn
+            - run: yarn build
             - run: yarn publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
