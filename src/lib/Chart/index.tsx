@@ -26,16 +26,14 @@ const Chart: React.FC<Props> = ({
     // Create UIs
     const gridItem = (props: GridItemProps) => {
         const classes = [`waffle-chart-square`];
-        if (props.isSmall) classes.push(`a`);
-        if (props.isMedium) classes.push(`b`);
-        if (props.isLarge) classes.push(`c`);
+        classes.push(props.identifier);
         if (isAnimatedFill) classes.push(`animate-fill`);
         if (isZeros) classes.push('zeroed');
         return (
             <div
                 data-testid='chart-square'
                 className={classes.join(' ')}
-                style={props.isSmall ? bgValuedStyle : bgDefaultStyle}
+                style={props.isA ? bgValuedStyle : bgDefaultStyle}
                 key={props.index}
                 title={`square${props.index}`}
                 onClick={() => clickHandler(props)}></div>

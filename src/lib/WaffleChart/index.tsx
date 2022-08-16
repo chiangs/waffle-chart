@@ -6,6 +6,7 @@ import type {
     HorizontalFill,
     Rounding,
     VerticalFill,
+    ValueIdentifier,
 } from '../__types';
 import './index.css';
 import Chart from '../Chart';
@@ -20,18 +21,23 @@ type Props = WaffleChartProps;
  * @param rounding : Rounding, rounding method
  * @returns rounded number
  */
-const round = (percentage: number, rounding: Rounding) => {
-    if (percentage > 100) return 100;
+const round = (
+    percentage: ValueIdentifier,
+    rounding: Rounding
+): ValueIdentifier => {
+    const copy = { ...percentage };
+    if (percentage.value > 100) copy.value = 100;
     switch (rounding) {
         case 'nearest':
-            return Math.round(percentage);
+            copy.value = Math.round(percentage.value);
         case 'up':
-            return Math.ceil(percentage);
+            copy.value = Math.ceil(percentage.value);
         case 'down':
-            return Math.floor(percentage);
+            copy.value = Math.floor(percentage.value);
         default:
-            return Math.round(percentage);
+            copy.value = Math.round(percentage.value);
     }
+    return copy;
 };
 
 /**
@@ -145,21 +151,26 @@ const createPropsCollection = (
  * @param s
  * @returns GridItemProps[]
  */
-const createLinearProps = (
-    l: number,
-    m: number,
-    s: number
-): GridItemProps[] => {
-    console.log(l, m, s);
-
+const createLinearProps = (collection: ValueIdentifier[]): GridItemProps[] => {
+    console.log(collection);
+    const [largest, medium, smallest] = [...collection];
+    const s = smallest.value;
+    const m = medium.value;
     const mIndexOverS = s + m;
     const props: GridItemProps[] = [];
     for (let index = 100; index > 0; index--) {
         const isSmall = index <= s;
         const isMedium = index > s && index <= mIndexOverS;
         const isLarge = !isMedium && !isSmall;
+        const identifier = isSmall
+            ? smallest.id
+            : isMedium
+            ? medium.id
+            : largest.id;
+
         const itemProp: GridItemProps = {
             index,
+            identifier,
             isSmall,
             isMedium,
             isLarge,
@@ -227,6 +238,15 @@ const calcTotal = (a: number, b: number, c: number): number => a + b + c;
 const calcPercentageRaw = (part: number, total: number): number =>
     (part / total) * 100;
 
+const createValueIdentifiers = (
+    a: number,
+    b: number,
+    c: number
+): ValueIdentifier[] => [
+    { id: 'a', value: a },
+    { id: 'b', value: b },
+    { id: 'c', value: c },
+];
 /**
  * Sort the values from largest to smallest
  * @param a
@@ -235,15 +255,8 @@ const calcPercentageRaw = (part: number, total: number): number =>
  * @returns sorted list of values
  */
 const sortValuesLargestToLowest = (
-    a: number,
-    b: number,
-    c: number
-): { id: string; value: number }[] =>
-    [
-        { id: 'a', value: a },
-        { id: 'b', value: b },
-        { id: 'c', value: c },
-    ].sort((a, b) => b.value - a.value);
+    collection: ValueIdentifier[]
+): ValueIdentifier[] => collection.sort((a, b) => b.value - a.value);
 
 /**
  * Determine if style override passed in as prop
@@ -254,16 +267,14 @@ const getColorOverride = (color?: string): { background: string } | undefined =>
     color ? { background: color } : undefined;
 
 const getGridItemProps = (
-    a: number,
-    b: number,
-    c: number,
+    collection: ValueIdentifier[],
     isSquareFill: boolean
-) => (isSquareFill ? null : createLinearProps(a, b, c));
+) => (isSquareFill ? null : createLinearProps(collection));
 
 const WaffleChart: React.FC<Props> = ({
-    partA = 0,
-    partB = 1,
-    partC = 0,
+    partA = 1,
+    partB = 29,
+    partC = 30,
     partAlabel = 'count',
     partBlabel = 'count',
     partClabel = 'count',
@@ -273,7 +284,7 @@ const WaffleChart: React.FC<Props> = ({
     isSquareFill = false,
     isAnimatedFill = true,
     showDataDisplay = true,
-    showTotal = false,
+    showTotal = true,
     partAcolor = undefined,
     partBcolor = undefined,
     partCcolor = undefined,
@@ -292,17 +303,17 @@ const WaffleChart: React.FC<Props> = ({
     const rawA = calcPercentageRaw(partA, rawTotal);
     const rawB = calcPercentageRaw(partB, rawTotal);
     const rawC = calcPercentageRaw(partC, rawTotal);
+    // Create collection of ValueIdentifier obj
+    const rawCollectionWithIdentifiers = createValueIdentifiers(
+        rawA,
+        rawB,
+        rawC
+    );
     // Determine order from largest
-    const ordered = sortValuesLargestToLowest(rawA, rawB, rawC);
+    const ordered = sortValuesLargestToLowest(rawCollectionWithIdentifiers);
     const rounded = ordered.map((o) => round(o, rounding));
-    const roundC = round(L, rounding);
-    const roundB = round(M, rounding);
-    const roundA = 100 - roundC - roundB;
     // Create prop collection for each portion
-    // const propsL = createPropsCollection(roundA, isSquareFill);
-    // const propsM = createPropsCollection(roundB, isSquareFill);
-    // const propsS = createPropsCollection(roundC, isSquareFill);
-    const propsGrid = getGridItemProps(roundA, roundB, roundC, isSquareFill);
+    const propsGrid = getGridItemProps(rounded, isSquareFill);
     // Determing fill direction
     const verticalFill: VerticalFill = isFilledFromTop ? 'top' : 'bottom';
     const horizontalFill: HorizontalFill = isFrilledFromLeft ? 'left' : 'right';

@@ -9,8 +9,14 @@ export type VerticalFill = 'top' | 'bottom';
 
 export type HorizontalFill = 'left' | 'right';
 
+export interface ValueIdentifier {
+    id: 'a' | 'b' | 'c';
+    value: number;
+}
+
 export interface GridItemProps {
     index: number;
+    identifier: 'a' | 'b' | 'c';
     isSmall: boolean;
     isMedium: boolean;
     isLarge: boolean;
