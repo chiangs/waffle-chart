@@ -11,7 +11,9 @@ export type HorizontalFill = 'left' | 'right';
 
 export interface GridItemProps {
     index: number;
-    isValue: boolean;
+    isSmall: boolean;
+    isMedium: boolean;
+    isLarge: boolean;
     data?: any;
 }
 
@@ -25,8 +27,10 @@ export interface DataDisplayProps {
 export type WaffleChartProps = {
     partA?: number;
     partB?: number;
+    partC?: number;
     partAlabel?: string;
     partBlabel?: string;
+    partClabel?: string;
     rounding?: Rounding;
     isFilledFromTop?: boolean;
     isFrilledFromLeft?: boolean;
@@ -34,8 +38,9 @@ export type WaffleChartProps = {
     isAnimatedFill?: boolean;
     showDataDisplay?: boolean;
     showTotal?: boolean;
-    partAColor?: string;
-    partBColor?: string;
+    partAcolor?: string;
+    partBcolor?: string;
+    partCcolor?: string;
     totalColor?: string;
     clickHandler?: (props: GridItemProps) => GridItemProps;
 };

@@ -38,6 +38,8 @@ Pies and donuts are harder to read, take longer to evaluate the meaning behind t
 
 Waffle charts can display more in the same amount of space at a larger, easier to read size. It provides a better graphical and textual representation of proportions. Thanks to a 10 x 10 grid, the user can quickly assess the overall portions and then drill down to the 1%.
 
+My personal opinion is that after three values, a bar chart (`stackable-bar-chart` coming soon) is better at showing the data relations rather than the waffle, which is why I've capped the values to three for this component. It also helps to keep each input prop primitive.
+
 <p>
   <img src="/assets/donut.svg?sanitize=true" alt="donut" width="300"/>
   &nbsp;
@@ -61,7 +63,6 @@ If you are using this in a commercial project, please consider leaving a donatio
 
 - Requires browser support for CSS `grid` and `flexbox`.
 - Requires browser support for CSS `clamp()`.
-- Currently only available for two values _(good candidate for next version)_.
 
 ## Demo
 

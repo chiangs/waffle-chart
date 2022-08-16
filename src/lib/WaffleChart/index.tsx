@@ -21,6 +21,7 @@ type Props = WaffleChartProps;
  * @returns rounded number
  */
 const round = (percentage: number, rounding: Rounding) => {
+    if (percentage > 100) return 100;
     switch (rounding) {
         case 'nearest':
             return Math.round(percentage);
@@ -137,11 +138,46 @@ const createPropsCollection = (
     return props;
 };
 
+/**
+ * Returns props for linear fill
+ * @param l
+ * @param m
+ * @param s
+ * @returns GridItemProps[]
+ */
+const createLinearProps = (
+    l: number,
+    m: number,
+    s: number
+): GridItemProps[] => {
+    console.log(l, m, s);
+
+    const mIndexOverS = s + m;
+    const props: GridItemProps[] = [];
+    for (let index = 100; index > 0; index--) {
+        const isSmall = index <= s;
+        const isMedium = index > s && index <= mIndexOverS;
+        const isLarge = !isMedium && !isSmall;
+        const itemProp: GridItemProps = {
+            index,
+            isSmall,
+            isMedium,
+            isLarge,
+        };
+        props.push(itemProp);
+    }
+    console.log('🚀 ~ file: index.tsx ~ line 157 ~ props', props);
+
+    return props;
+};
+
 const createDisplayProps = (
     partA: number,
     partB: number,
+    partC: number,
     partAlabel: string,
     partBlabel: string,
+    partClabel: string,
     rounded: number,
     bgPartAstyle:
         | {
@@ -173,61 +209,127 @@ const createDisplayProps = (
     return { data1Props, data2Props };
 };
 
-const calcTotal = (a: number, b: number): number => a + b;
+/**
+ * Calculate the total
+ * @param a
+ * @param b
+ * @param c
+ * @returns total
+ */
+const calcTotal = (a: number, b: number, c: number): number => a + b + c;
+
+/**
+ * Get the raw percentage of a value
+ * @param part
+ * @param total
+ * @returns raw percentage
+ */
+const calcPercentageRaw = (part: number, total: number): number =>
+    (part / total) * 100;
+
+/**
+ * Sort the values from largest to smallest
+ * @param a
+ * @param b
+ * @param c
+ * @returns sorted list of values
+ */
+const sortValuesLargestToLowest = (
+    a: number,
+    b: number,
+    c: number
+): { id: string; value: number }[] =>
+    [
+        { id: 'a', value: a },
+        { id: 'b', value: b },
+        { id: 'c', value: c },
+    ].sort((a, b) => b.value - a.value);
+
+/**
+ * Determine if style override passed in as prop
+ * @param color
+ * @returns CSS prop object for background or undefined
+ */
+const getColorOverride = (color?: string): { background: string } | undefined =>
+    color ? { background: color } : undefined;
+
+const getGridItemProps = (
+    a: number,
+    b: number,
+    c: number,
+    isSquareFill: boolean
+) => (isSquareFill ? null : createLinearProps(a, b, c));
 
 const WaffleChart: React.FC<Props> = ({
     partA = 0,
-    partB = 0,
+    partB = 1,
+    partC = 0,
     partAlabel = 'count',
     partBlabel = 'count',
+    partClabel = 'count',
     rounding = 'nearest',
     isFilledFromTop = false,
     isFrilledFromLeft = false,
-    isSquareFill = true,
+    isSquareFill = false,
     isAnimatedFill = true,
     showDataDisplay = true,
     showTotal = false,
-    partAColor = undefined,
-    partBColor = undefined,
+    partAcolor = undefined,
+    partBcolor = undefined,
+    partCcolor = undefined,
     totalColor = undefined,
     clickHandler = (props) => props,
 }: Props) => {
-    const bgPartAstyle = partAColor ? { background: partAColor } : undefined;
-    const bgPartBstyle = partBColor ? { background: partBColor } : undefined;
-    const totalStyle = totalColor ? { color: totalColor } : undefined;
-    // Calculate value
-    const percentage = (partA / (partA + partB)) * 100;
-    const rounded = percentage > 100 ? 100 : round(percentage, rounding);
-    const verticalFill: VerticalFill = isFilledFromTop ? 'top' : 'bottom';
-    const horizontalFill: HorizontalFill = isFrilledFromLeft ? 'left' : 'right';
-    // Create prop collection
-    const itemProps = createPropsCollection(rounded, isSquareFill);
-    // Create display prop collection
-    let dataDisplay;
-    const total = calcTotal(partA, partB);
-    const totalDisplay = showTotal ? (
-        <Total style={totalStyle}>{total}</Total>
-    ) : null;
-    if (showDataDisplay) {
-        const { data1Props, data2Props } = createDisplayProps(
-            partA,
-            partB,
-            partAlabel,
-            partBlabel,
-            rounded,
-            bgPartAstyle,
-            bgPartBstyle
-        );
-        dataDisplay = (
-            <DataDisplay
-                data1={data1Props}
-                data2={data2Props}
-                verticalFill={verticalFill}
-            />
-        );
-    }
     // Click handler
     const onItemClick = (props: GridItemProps) => clickHandler(props);
+    // Determine color overrides
+    const styleA = getColorOverride(partAcolor);
+    const styleB = getColorOverride(partBcolor);
+    const styleC = getColorOverride(partCcolor);
+    const styleTotal = getColorOverride(totalColor);
+    // Calculate raw values
+    const rawTotal = calcTotal(partA, partB, partC);
+    const rawA = calcPercentageRaw(partA, rawTotal);
+    const rawB = calcPercentageRaw(partB, rawTotal);
+    const rawC = calcPercentageRaw(partC, rawTotal);
+    // Determine order from largest
+    const ordered = sortValuesLargestToLowest(rawA, rawB, rawC);
+    const rounded = ordered.map((o) => round(o, rounding));
+    const roundC = round(L, rounding);
+    const roundB = round(M, rounding);
+    const roundA = 100 - roundC - roundB;
+    // Create prop collection for each portion
+    // const propsL = createPropsCollection(roundA, isSquareFill);
+    // const propsM = createPropsCollection(roundB, isSquareFill);
+    // const propsS = createPropsCollection(roundC, isSquareFill);
+    const propsGrid = getGridItemProps(roundA, roundB, roundC, isSquareFill);
+    // Determing fill direction
+    const verticalFill: VerticalFill = isFilledFromTop ? 'top' : 'bottom';
+    const horizontalFill: HorizontalFill = isFrilledFromLeft ? 'left' : 'right';
+    // Create display prop collection
+    let dataDisplay;
+    const totalDisplay = showTotal ? (
+        <Total style={styleTotal}>{rawTotal}</Total>
+    ) : null;
+
+    if (showDataDisplay) {
+        // const { data1Props, data2Props } = createDisplayProps(
+        //     partA,
+        //     partB,
+        //     partAlabel,
+        //     partBlabel,
+        //     rounded,
+        //     styleA,
+        //     styleB
+        // );
+        // dataDisplay = (
+        //     <DataDisplay
+        //         data1={data1Props}
+        //         data2={data2Props}
+        //         verticalFill={verticalFill}
+        //     />
+        // );
+    }
 
     return (
         <div
@@ -235,9 +337,9 @@ const WaffleChart: React.FC<Props> = ({
             data-testid='waffle-chart-container'>
             {totalDisplay}
             <Chart
-                bgDefaultStyle={bgPartBstyle}
-                bgValuedStyle={bgPartAstyle}
-                itemProps={itemProps}
+                bgDefaultStyle={styleB}
+                bgValuedStyle={styleA}
+                itemProps={propsGrid}
                 verticalFill={verticalFill}
                 horizontalFill={horizontalFill}
                 isAnimatedFill={isAnimatedFill}

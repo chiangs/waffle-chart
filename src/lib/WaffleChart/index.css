@@ -3,8 +3,9 @@
     --size-max: 50px;
     --gap: 8px;
     --bg-fallback-default: cadetblue;
-    --bg-fallback-valued: palevioletred;
-    --bg-fallback-total: slategray;
+    --bg-fallback-a: palevioletred;
+    --bg-fallback-b: steelblue;
+    --bg-fallback-c: slategray;
     --radius-square: 1px;
 }
 
@@ -51,15 +52,21 @@
     transition: background 0.3s ease-in-out;
 }
 
-.waffle-chart-square.zeroed:not(.valued) {
-    background: var(--bg-fallback-total);
+.waffle-chart-square.zeroed:not(.a) {
+    background: var(--bg-fallback-c);
 }
 
-.waffle-chart-square.valued {
-    background: var(--bg-square-valued, var(--bg-fallback-valued));
+.waffle-chart-square.a {
+    background: var(--bg-square-a, var(--bg-fallback-a));
+}
+.waffle-chart-square.b {
+    background: var(--bg-square-b, var(--bg-fallback-b));
+}
+.waffle-chart-square.c {
+    background: var(--bg-square-c, var(--bg-fallback-c));
 }
 
-.waffle-chart-square.valued:hover {
+.waffle-chart-square:hover {
     filter: invert(15%) brightness(75%) saturate(300%);
 }
 
@@ -80,7 +87,7 @@
     flex-direction: column;
     justify-content: center;
     font-size: clamp(2.5rem, 10vw, 140px);
-    color: var(--bg-total, var(--bg-fallback-total));
+    color: var(--bg-c, var(--bg-fallback-c));
 }
 
 .display-item h3 {
