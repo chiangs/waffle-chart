@@ -3,9 +3,7 @@ import type { CSSProperties } from 'react';
 import type { GridItemProps, HorizontalFill, VerticalFill } from '../__types';
 
 type Props = {
-    bgDefaultStyle: CSSProperties | undefined;
-    bgValuedStyle: CSSProperties | undefined;
-    itemProps: GridItemProps[];
+    itemProps: GridItemProps[] | null;
     verticalFill: VerticalFill;
     horizontalFill: HorizontalFill;
     isAnimatedFill: boolean;
@@ -14,13 +12,11 @@ type Props = {
 };
 
 const Chart: React.FC<Props> = ({
-    bgDefaultStyle,
-    bgValuedStyle,
-    itemProps,
-    verticalFill,
-    horizontalFill,
-    isAnimatedFill,
-    isZeros,
+    itemProps = [],
+    verticalFill = 'bottom',
+    horizontalFill = 'right',
+    isAnimatedFill = true,
+    isZeros = false,
     clickHandler,
 }: Props) => {
     // Create UIs
@@ -29,18 +25,22 @@ const Chart: React.FC<Props> = ({
         classes.push(props.identifier);
         if (isAnimatedFill) classes.push(`animate-fill`);
         if (isZeros) classes.push('zeroed');
+        // Fallback style
+        const fallbackStyle = {
+            background: `var(--bg-fallback-${props.identifier})`,
+        };
         return (
             <div
                 data-testid='chart-square'
                 className={classes.join(' ')}
-                style={props.isA ? bgValuedStyle : bgDefaultStyle}
+                style={props.style || fallbackStyle}
                 key={props.index}
                 title={`square${props.index}`}
                 onClick={() => clickHandler(props)}></div>
         );
     };
 
-    const grid = itemProps.map((p) => gridItem(p));
+    const grid = itemProps?.map((p) => gridItem(p));
     return (
         <div
             className={`waffle-chart ${verticalFill} ${horizontalFill}`}

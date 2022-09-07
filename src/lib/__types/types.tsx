@@ -9,9 +9,11 @@ export type VerticalFill = 'top' | 'bottom';
 
 export type HorizontalFill = 'left' | 'right';
 
-export interface ValueIdentifier {
+export interface PartProps {
     id: 'a' | 'b' | 'c';
     value: number;
+    percentage: number;
+    style?: React.CSSProperties;
 }
 
 export interface GridItemProps {
@@ -21,6 +23,7 @@ export interface GridItemProps {
     isMedium: boolean;
     isLarge: boolean;
     data?: any;
+    style?: React.CSSProperties;
 }
 
 export interface DataDisplayProps {
@@ -34,6 +37,7 @@ export type WaffleChartProps = {
     partA?: number;
     partB?: number;
     partC?: number;
+    displayPrecision?: number;
     partAlabel?: string;
     partBlabel?: string;
     partClabel?: string;
