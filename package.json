@@ -1,6 +1,6 @@
 {
     "name": "waffle-chart",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "description": "waffle-chart",
     "author": "chiangs",
     "license": "MIT",
@@ -32,7 +32,7 @@
         "build": "vite build",
         "test": "vitest run",
         "watch": "vitest",
-        "coverage": "vitest run --coverage",
+        "coverage": "vitest --coverage",
         "testui": "vitest --ui"
     },
     "browserslist": {
