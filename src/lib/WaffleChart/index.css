@@ -6,12 +6,25 @@
     --bg-fallback-a: palevioletred;
     --bg-fallback-b: steelblue;
     --bg-fallback-c: slategray;
+    --bg-fallback-total: seagreen;
     --radius-square: 1px;
 }
 
 .waffle-chart-container {
     display: flex;
     width: fit-content;
+}
+
+.a {
+    color: var(--bg-fallback-a);
+}
+
+.b {
+    color: var(--bg-fallback-b);
+}
+
+.c {
+    color: var(--bg-fallback-c);
 }
 
 .waffle-chart {
@@ -87,7 +100,7 @@
     flex-direction: column;
     justify-content: center;
     font-size: clamp(2.5rem, 10vw, 140px);
-    color: var(--bg-c, var(--bg-fallback-c));
+    color: var(--bg-c, var(--bg-fallback-total));
 }
 
 .display-item h3 {

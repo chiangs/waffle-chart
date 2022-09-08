@@ -6,11 +6,11 @@ exports[`DataDisplay > DataDisplay component renders correctly 1`] = `
   data-testid="display-container"
 >
   <div
-    className="display-item"
+    className="display-item a"
     data-testid="display-item"
     style={
       {
-        "color": "",
+        "color": undefined,
       }
     }
   >
@@ -27,15 +27,14 @@ exports[`DataDisplay > DataDisplay component renders correctly 1`] = `
     >
       1
        
-      data1
     </p>
   </div>
   <div
-    className="display-item"
+    className="display-item b"
     data-testid="display-item"
     style={
       {
-        "color": "",
+        "color": undefined,
       }
     }
   >
@@ -52,7 +51,30 @@ exports[`DataDisplay > DataDisplay component renders correctly 1`] = `
     >
       2
        
-      data2
+    </p>
+  </div>
+  <div
+    className="display-item c"
+    data-testid="display-item"
+    style={
+      {
+        "color": undefined,
+      }
+    }
+  >
+    <h3
+      className="display-item-title"
+      data-testid="display-percentage"
+    >
+      3
+      %
+    </h3>
+    <p
+      className="display-item-description"
+      data-testid="display-count"
+    >
+      3
+       
     </p>
   </div>
 </div>

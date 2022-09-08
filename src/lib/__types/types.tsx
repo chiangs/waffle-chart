@@ -13,6 +13,7 @@ export interface PartProps {
     id: 'a' | 'b' | 'c';
     value: number;
     percentage: number;
+    label?: string;
     style?: React.CSSProperties;
 }
 
@@ -24,13 +25,6 @@ export interface GridItemProps {
     isLarge: boolean;
     data?: any;
     style?: React.CSSProperties;
-}
-
-export interface DataDisplayProps {
-    value: number;
-    count: number;
-    dataLabel: string;
-    color?: string;
 }
 
 export type WaffleChartProps = {

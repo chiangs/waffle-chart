@@ -10,6 +10,8 @@ describe('Chart', () => {
             verticalFill: 'top',
             horizontalFill: 'left',
             isAnimatedFill: true,
+            isZeros: true,
+            clickHandler: null,
         };
         const component = renderer.create(<Chart {...props} />);
         const tree = component.toJSON();

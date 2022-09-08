@@ -5,608 +5,1114 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
   className="waffle-chart-container"
   data-testid="waffle-chart-container"
 >
+  <h3
+    className="total"
+    data-testid="total"
+  >
+    102
+  </h3>
   <div
-    className="waffle-chart bottom right"
+    className="waffle-chart chart-container bottom right"
     data-testid="chart-container"
   >
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square100"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square99"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square98"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square97"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square96"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square95"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square94"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square93"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square92"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square91"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square90"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square89"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square88"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square87"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square86"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square85"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square84"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square83"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square82"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square81"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square80"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square79"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square78"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square77"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square76"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square75"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square74"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square73"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square72"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square71"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square70"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square69"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square68"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square67"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square66"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square65"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square64"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square63"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square62"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square61"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square60"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square59"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square58"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square57"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square56"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square55"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square54"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square53"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square52"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square51"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square50"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square49"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square48"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square47"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square46"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square45"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square44"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square43"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square42"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square41"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square40"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square39"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square38"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square37"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square36"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square35"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square34"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square33"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square32"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square31"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square30"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square29"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square28"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square27"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square26"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square25"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square24"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square23"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square22"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square21"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square20"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square19"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square18"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square17"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square16"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square15"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square14"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square13"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square12"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square11"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square10"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square9"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square8"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square7"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square6"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square a animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-a)",
+        }
+      }
       title="square5"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square4"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square3"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square c animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-c)",
+        }
+      }
       title="square2"
     />
     <div
-      className="waffle-chart-square animate-fill zeroed"
-      data-testid="chart-square"
+      className="waffle-chart-square b animate-fill"
+      data-testid="waffle-chart-square"
       onClick={[Function]}
+      style={
+        {
+          "background": "var(--bg-fallback-b)",
+        }
+      }
       title="square1"
     />
   </div>
@@ -615,11 +1121,11 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
     data-testid="display-container"
   >
     <div
-      className="display-item"
+      className="display-item b"
       data-testid="display-item"
       style={
         {
-          "color": "palevioletred",
+          "color": undefined,
         }
       }
     >
@@ -627,24 +1133,24 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
         className="display-item-title"
         data-testid="display-percentage"
       >
-        0
+        1
         %
       </h3>
       <p
         className="display-item-description"
         data-testid="display-count"
       >
-        0
+        1.5
          
-        count
+        B
       </p>
     </div>
     <div
-      className="display-item"
+      className="display-item c"
       data-testid="display-item"
       style={
         {
-          "color": "cadetblue",
+          "color": undefined,
         }
       }
     >
@@ -652,16 +1158,41 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
         className="display-item-title"
         data-testid="display-percentage"
       >
-        0
+        10
         %
       </h3>
       <p
         className="display-item-description"
         data-testid="display-count"
       >
-        0
+        10
          
-        count
+        C
+      </p>
+    </div>
+    <div
+      className="display-item a"
+      data-testid="display-item"
+      style={
+        {
+          "color": undefined,
+        }
+      }
+    >
+      <h3
+        className="display-item-title"
+        data-testid="display-percentage"
+      >
+        89
+        %
+      </h3>
+      <p
+        className="display-item-description"
+        data-testid="display-count"
+      >
+        90
+         
+        A
       </p>
     </div>
   </div>

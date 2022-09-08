@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`Chart > Chart component renders correctly 1`] = `
+<div
+  className="waffle-chart-square  animate-fill zeroed"
+  data-testid="waffle-chart-square"
+  onClick={[Function]}
+  style={
+    {
+      "background": "var(--bg-fallback-undefined)",
+    }
+  }
+  title="squareundefined"
+/>
+`;

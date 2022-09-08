@@ -11,6 +11,8 @@ type Props = {
     clickHandler: (props: GridItemProps) => GridItemProps;
 };
 
+const COMPONENT_NAME = 'chart-container';
+
 const Chart: React.FC<Props> = ({
     itemProps = [],
     verticalFill = 'bottom',
@@ -19,11 +21,10 @@ const Chart: React.FC<Props> = ({
     isZeros = false,
     clickHandler,
 }: Props) => {
-    console.log('🚀 ~ file: index.tsx ~ line 23 ~ itemProps', itemProps);
     const grid = itemProps?.map((p, i) => (
         <ChartSquare
             key={`${p.identifier}${i}`}
-            props={p}
+            gridItemProps={p}
             isAnimatedFill={isAnimatedFill}
             isZeros={isZeros}
             clickHandler={clickHandler}
@@ -31,8 +32,8 @@ const Chart: React.FC<Props> = ({
     ));
     return (
         <div
-            className={`waffle-chart ${verticalFill} ${horizontalFill}`}
-            data-testid='chart-container'>
+            className={`waffle-chart ${COMPONENT_NAME} ${verticalFill} ${horizontalFill}`}
+            data-testid={COMPONENT_NAME}>
             {grid}
         </div>
     );

@@ -2,34 +2,36 @@ import React from 'react';
 import type { GridItemProps } from '../__types';
 
 type Props = {
-    props: GridItemProps;
+    gridItemProps: GridItemProps;
     isAnimatedFill: boolean;
     isZeros: boolean;
     clickHandler: (props: GridItemProps) => GridItemProps;
 };
 
+const NAME_COMPONENT = `waffle-chart-square`;
+
 const ChartSquare: React.FC<Props> = ({
-    props,
+    gridItemProps,
     isAnimatedFill,
     isZeros,
     clickHandler,
 }: Props) => {
-    const classes = [`waffle-chart-square`];
-    classes.push(props.identifier);
+    const classes = [NAME_COMPONENT];
+    classes.push(gridItemProps?.identifier);
     if (isAnimatedFill) classes.push(`animate-fill`);
     if (isZeros) classes.push('zeroed');
     // Fallback style
     const fallbackStyle = {
-        background: `var(--bg-fallback-${props.identifier})`,
+        background: `var(--bg-fallback-${gridItemProps?.identifier})`,
     };
     return (
         <div
-            data-testid='chart-square'
+            data-testid={NAME_COMPONENT}
             className={classes.join(' ')}
-            style={props.style || fallbackStyle}
-            key={props.index}
-            title={`square${props.index}`}
-            onClick={() => clickHandler(props)}></div>
+            style={gridItemProps?.style || fallbackStyle}
+            key={gridItemProps?.index}
+            title={`square${gridItemProps?.index}`}
+            onClick={() => clickHandler(gridItemProps)}></div>
     );
 };
 

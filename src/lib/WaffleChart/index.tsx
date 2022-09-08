@@ -1,7 +1,6 @@
 import React from 'react';
 import type {
     WaffleChartProps,
-    DataDisplayProps,
     GridItemProps,
     HorizontalFill,
     Rounding,
@@ -14,6 +13,8 @@ import DataDisplay from '../DataDisplay';
 import Total from '../Total';
 
 type Props = WaffleChartProps;
+
+const COMPONENT_NAME = 'waffle-chart-container';
 
 /**
  * Calculate the total
@@ -51,8 +52,10 @@ const sortValuesLargestToLowest = (collection: PartProps[]): PartProps[] =>
  * @param color
  * @returns CSS prop object for background or undefined
  */
-const getColorOverride = (color?: string): { background: string } | undefined =>
-    color ? { background: color } : undefined;
+const getColorOverride = (
+    color?: string
+): { color: string; background: string } | undefined =>
+    color ? { color, background: color } : undefined;
 
 /**
  * Rounds a number
@@ -138,25 +141,26 @@ const getSquareProps = (value: number): { c: number; r: number; e: number } => {
     return { c, r, e };
 };
 
+/**
+ * Returns rendering props for square rendering
+ * mPercentage depends if there is 3rd value to offset beginning col
+ * @param param0
+ * @returns
+ */
 const createSquareProps = ([
     largest,
     medium,
     smallest,
 ]: PartProps[]): GridItemProps[] => {
-    console.log(
-        '🚀 ~ file: index.tsx ~ line 187 ~ largest',
-        largest.percentage,
-        medium.percentage,
-        smallest.percentage
-    );
     const itemProps = [];
+    const mPercentage = smallest.percentage
+        ? smallest.percentage + medium.percentage
+        : medium.percentage;
     const sProps = getSquareProps(smallest.percentage);
-    const mProps = getSquareProps(medium.percentage);
-    console.log('🚀 ~ file: index.tsx ~ line 196 ~ mProps', mProps);
+    const mProps = getSquareProps(mPercentage);
     // Callbacks
     const getRow = (c: number): number => (Math.ceil(c / 10) * 10) / 10;
     const getRowColumnIndex = (r: number, c: number): number => r * 10 - 10 + c;
-
     const isValueForRow = (
         props: { c: number; r: number; e: number },
         row: number,
@@ -164,67 +168,79 @@ const createSquareProps = ([
     ): boolean =>
         (row < props.r && column <= getRowColumnIndex(row, props.c)) ||
         (row === props.r && column <= getRowColumnIndex(row, props.c));
-
     const isExtraForRow = (
         props: { c: number; r: number; e: number },
         row: number,
         column: number
     ) => row === props.r + 1 && column <= getRowColumnIndex(row, props.e);
 
+    // Iterate through each grid square to assign props
     for (let column = 100; column > 0; column--) {
         const row = getRow(column);
-
-        const isSmall = false;
-
+        const isSmall = sProps.r
+            ? isValueForRow(sProps, row, column) ||
+              isExtraForRow(sProps, row, column)
+            : false;
         const isMedium =
             isValueForRow(mProps, row, column) ||
             isExtraForRow(mProps, row, column);
-
         const isLarge = !isSmall && !isMedium;
         const identifier = isSmall
             ? smallest.id
             : isMedium
             ? medium.id
             : largest.id;
-
+        const style = isSmall
+            ? smallest.style
+            : isMedium
+            ? medium.style
+            : isLarge
+            ? largest.style
+            : undefined;
         const itemProp: GridItemProps = {
             index: column,
             identifier,
             isSmall,
             isMedium,
             isLarge,
+            style,
         };
         itemProps.push(itemProp);
     }
     return itemProps;
 };
 
+/**
+ * Composes props based on settings and conditions
+ * 50/50 always renders linear for ease of reading
+ * @param PartProps from largest to smallest
+ * @param isSquareFill
+ * @returns rendering props by square or linear
+ */
 const getGridItemProps = ([l, m, s]: PartProps[], isSquareFill: boolean) => {
     const minSquares = 2;
     const canSquareS = s.percentage > minSquares;
     const canSquareM = canSquareS || m.percentage > minSquares;
-    const isHalfHalf = l.percentage === 50;
+    const isHalfHalf = l.percentage === 50 && !s.percentage;
     return !isHalfHalf && isSquareFill && (canSquareS || canSquareM)
         ? createSquareProps([l, m, s])
         : createLinearProps([l, m, s]);
 };
 
-// TODO: earlier check on negative
-// TODO: earlier check on anything over 100%?
 const WaffleChart: React.FC<Props> = ({
-    partA = 24,
-    partB = 0,
-    partC = 100 - partA,
+    partA = 90,
+    partB = 1.5,
+    partC = 10,
     displayPrecision = 0,
-    partAlabel = 'count',
-    partBlabel = 'count',
-    partClabel = 'count',
+    partAlabel = 'A',
+    partBlabel = 'B',
+    partClabel = 'C',
     rounding = 'nearest',
     isFilledFromTop = false,
     isFrilledFromLeft = false,
     isSquareFill = true,
     isAnimatedFill = true,
-    showDataDisplay = false,
+    showDataDisplay = true,
     showTotal = true,
     partAcolor = undefined,
     partBcolor = undefined,
@@ -247,26 +263,29 @@ const WaffleChart: React.FC<Props> = ({
         (p) => calcPercentageRaw(p, rawTotal)
     );
     // Create collection of ValueIdentifier obj
-    const valueA: PartProps = {
+    const propA: PartProps = {
         id: 'a',
         value: partA,
         percentage: percentAraw,
+        label: partAlabel,
         style: styleA,
     };
-    const valueB: PartProps = {
+    const propB: PartProps = {
         id: 'b',
         value: partB,
         percentage: percentBraw,
+        label: partBlabel,
         style: styleB,
     };
-    const valueC: PartProps = {
+    const propC: PartProps = {
         id: 'c',
         value: partC,
         percentage: percentCraw,
+        label: partClabel,
         style: styleC,
     };
     // Determine order from largest
-    const ordered = sortValuesLargestToLowest([valueA, valueB, valueC]);
+    const ordered = sortValuesLargestToLowest([propA, propB, propC]);
     const rounded = ordered.map((o) => round(o, rounding));
     // Determing fill direction
     const verticalFill: VerticalFill = isFilledFromTop ? 'top' : 'bottom';
@@ -276,34 +295,22 @@ const WaffleChart: React.FC<Props> = ({
         <Total style={styleTotal}>{total}</Total>
     ) : null;
     // Data Display
-    // const { data1Props, data2Props } = showDataDisplay
-    //     ? createDisplayProps(
-    //           partA,
-    //           partB,
-    //           partC,
-    //           partAlabel,
-    //           partBlabel,
-    //           partClabel,
-    //           rounded,
-    //           styleA,
-    //           styleB
-    //       )
-    //     : { data1Props: null, data2Props: null };
-    // const dataDisplay =
-    //     showDataDisplay && data1Props && data2Props ? (
-    //         <DataDisplay
-    //             data1={data1Props}
-    //             data2={data2Props}
-    //             verticalFill={verticalFill}
-    //         />
-    //     ) : null;
+    const dataDisplay =
+        showDataDisplay && propA && propB && propC ? (
+            <DataDisplay
+                data1={rounded[2]}
+                data2={rounded[1]}
+                data3={rounded[0]}
+                verticalFill={verticalFill}
+                precision={displayPrecision}
+            />
+        ) : null;
 
+    // Grid rendering properties
     const propsGrid = getGridItemProps(rounded, isSquareFill);
 
     return (
-        <div
-            className='waffle-chart-container'
-            data-testid='waffle-chart-container'>
+        <div className={COMPONENT_NAME} data-testid={COMPONENT_NAME}>
             {totalDisplay}
             <Chart
                 itemProps={propsGrid}
@@ -313,7 +320,7 @@ const WaffleChart: React.FC<Props> = ({
                 isZeros={!partA && !partB}
                 clickHandler={onItemClick}
             />
-            {/* {dataDisplay} */}
+            {dataDisplay}
         </div>
     );
 };

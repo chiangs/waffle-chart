@@ -1,36 +1,45 @@
 import React from 'react';
-import type { DataDisplayProps, VerticalFill } from '../__types';
+import type { PartProps, VerticalFill } from '../__types';
 
 type Props = {
-    data1: DataDisplayProps;
-    data2: DataDisplayProps;
+    data1: PartProps;
+    data2: PartProps;
+    data3: PartProps;
     verticalFill: VerticalFill;
+    precision: number;
 };
-const DataDisplay: React.FC<Props> = (props: Props) => {
-    const displayClasses = [
-        'waffle-chart-display-container',
-        props.verticalFill,
-    ];
+
+const NAME_COMPONENT = 'display-item';
+
+const DataDisplay: React.FC<Props> = ({
+    data1,
+    data2,
+    data3,
+    verticalFill,
+    precision,
+}: Props) => {
+    const displayClasses = ['waffle-chart-display-container', verticalFill];
     const displayItem = ({
+        id,
         value,
-        count,
-        dataLabel,
-        color = '',
-    }: DataDisplayProps) => (
+        percentage,
+        label,
+        style,
+    }: PartProps) => (
         <div
-            key={value}
-            className='display-item'
-            style={{ color }}
-            data-testid='display-item'>
+            key={`${label}${value}`}
+            className={[NAME_COMPONENT, id].join(' ')}
+            style={{ color: style?.color }}
+            data-testid={NAME_COMPONENT}>
             <h3 className='display-item-title' data-testid='display-percentage'>
-                {value}%
+                {percentage.toFixed(precision)}%
             </h3>
             <p className='display-item-description' data-testid='display-count'>
-                {count}&nbsp;{dataLabel}
+                {value}&nbsp;{label}
             </p>
         </div>
     );
-    const display = [props?.data1, props?.data2].map((d) => displayItem(d));
+    const display = [data1, data2, data3].map((d) => displayItem(d));
     return (
         <div
             className={displayClasses.join(' ')}

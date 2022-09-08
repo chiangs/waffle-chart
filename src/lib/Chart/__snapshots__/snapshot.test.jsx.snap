@@ -2,7 +2,7 @@
 
 exports[`Chart > Chart component renders correctly 1`] = `
 <div
-  className="waffle-chart top left"
+  className="waffle-chart chart-container top left"
   data-testid="chart-container"
 />
 `;
