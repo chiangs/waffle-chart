@@ -16,6 +16,45 @@ import Total from '../Total';
 type Props = WaffleChartProps;
 
 /**
+ * Calculate the total
+ * @param a
+ * @param b
+ * @param c
+ * @returns total
+ */
+const calcTotal = (a: number, b: number, c: number): number => a + b + c;
+
+const normalize = (a: number, b: number, c: number): number[] =>
+    [a, b, c].map((v) => (v <= 0 ? 0 : v));
+
+/**
+ * Get the raw percentage of a value
+ * @param part
+ * @param total
+ * @returns raw percentage
+ */
+const calcPercentageRaw = (part: number, total: number): number =>
+    (part / total) * 100;
+
+/**
+ * Sort the values from largest to smallest
+ * @param a
+ * @param b
+ * @param c
+ * @returns sorted list of values
+ */
+const sortValuesLargestToLowest = (collection: PartProps[]): PartProps[] =>
+    collection.sort((a, b) => b.value - a.value);
+
+/**
+ * Determine if style override passed in as prop
+ * @param color
+ * @returns CSS prop object for background or undefined
+ */
+const getColorOverride = (color?: string): { background: string } | undefined =>
+    color ? { background: color } : undefined;
+
+/**
  * Rounds a number
  * @param part: number
  * @param rounding : Rounding, rounding method
@@ -39,110 +78,6 @@ const round = (part: PartProps, rounding: Rounding): PartProps => {
     }
     return copy;
 };
-
-/**
- * If filling grid as a square instead of by rows
- * @param value
- * @returns columns, rows, remaining nodes
- */
-const getSquareProps = (value: number): { c: number; r: number; e: number } => {
-    const sqrt = Math.sqrt(value);
-    const c = Math.ceil(sqrt);
-    const r = Math.floor(value / c);
-    const e = value - c * r;
-    return { c, r, e };
-};
-
-/**
- * Determines if index is within values of r
- * @param index
- * @param value
- * @param squareProps
- * @returns boolean
- */
-const setIsValueForCompleteRow = (
-    index: number,
-    value: number,
-    squareProps: { c: number; r: number; e: number } | null
-): boolean => {
-    if (!squareProps || value < 3) {
-        return index <= value;
-    }
-    const { c, r } = squareProps;
-    const row1 = index <= c;
-    const row2 = row1 || (index > 10 && index <= 10 + c);
-    const row3 = row2 || (index > 20 && index <= 20 + c);
-    const row4 = row3 || (index > 30 && index <= 30 + c);
-    const row5 = row4 || (index > 40 && index <= 40 + c);
-    const row6 = row5 || (index > 50 && index <= 50 + c);
-    const row7 = row6 || (index > 60 && index <= 60 + c);
-    const row8 = row7 || (index > 70 && index <= 70 + c);
-    const row9 = row8 || (index > 80 && index <= 80 + c);
-    const row10 = row9 || (index > 90 && index <= 90 + c);
-    const rowLogic: { [k: number]: boolean } = {
-        1: row1,
-        2: row2,
-        3: row3,
-        4: row4,
-        5: row5,
-        6: row6,
-        7: row7,
-        8: row8,
-        9: row9,
-        10: row10,
-    };
-    return rowLogic[r] || false;
-};
-
-/**
- * Determines if index is within values of e
- * @param index
- * @param value
- * @param squareProps
- * @returns boolean
- */
-const setIsValueForRemainder = (
-    index: number,
-    value: number,
-    squareProps: { c: number; r: number; e: number } | null
-): boolean => {
-    if (!squareProps || value < 3) {
-        return index <= value;
-    }
-    return index <= 10 * squareProps.r + squareProps.e;
-};
-
-/**
- * Builds the collection of GridItemProps
- * @param rounded
- * @returns GridItemProps[]
- */
-// const createPropsCollection = (
-//     value: number,
-//     isSquareFill: boolean
-// ): GridItemProps[] => {
-//     const props: GridItemProps[] = [];
-//     const squareProps = isSquareFill ? getSquareProps(value) : null;
-//     const setValueMethod = (i: number, isCompleteRow: boolean) =>
-//         isSquareFill && isCompleteRow
-//             ? setIsValueForCompleteRow(i, value, squareProps)
-//             : squareProps?.e
-//             ? setIsValueForRemainder(i, value, squareProps)
-//             : i <= value;
-
-//     for (let index = 100; index > 0; index--) {
-//         const indexInCompleteRow = squareProps
-//             ? index <= 10 * squareProps.r
-//             : true;
-//         const itemProp = {
-//             index,
-//             isValue:
-//                 value >= 100 ? true : setValueMethod(index, indexInCompleteRow),
-//         };
-//         props.push(itemProp);
-//     }
-//     return props;
-// };
 
 /**
  * Returns props for linear fill
@@ -187,103 +122,107 @@ const createLinearProps = ([
         };
         props.push(itemProp);
     }
-    return props;
+    return largest.percentage === 50 ? props.reverse() : props;
 };
 
-// const createDisplayProps = (
-//     partA: number,
-//     partB: number,
-//     partC: number,
-//     partAlabel: string,
-//     partBlabel: string,
-//     partClabel: string,
-//     rounded: PartProps[],
-//     bgPartAstyle:
-//         | {
-//               background: string;
-//           }
-//         | undefined,
-//     bgPartBstyle:
-//         | {
-//               background: string;
-//           }
-//         | undefined
-// ): {
-//     data1Props: DataDisplayProps;
-//     data2Props: DataDisplayProps;
-// } => {
-// const usePositiveOrZero = (v: number) => (v >= 0 ? v : 0);
-// const [data1Props, data2Props, data3Props] = rounded.map((d) => ({
-//     value: usePositiveOrZero(d.value),
-//     count: usePositiveOrZero(d.value),
-//     dataLabel: partAlabel,
-//     color: bgPartAstyle?.background || 'palevioletred',
-// })
-// const data1Props: DataDisplayProps = {
-//     value: usePositiveOrZero(rounded),
-//     count: usePositiveOrZero(partA),
-//     dataLabel: partAlabel,
-//     color: bgPartAstyle?.background || 'palevioletred',
-// };
-// const data2Props: DataDisplayProps = {
-//     value: usePositiveOrZero(100 - rounded),
-//     count: usePositiveOrZero(partB),
-//     dataLabel: partBlabel,
-//     color: bgPartBstyle?.background || 'cadetblue',
-// };
-// };
-
 /**
- * Calculate the total
- * @param a
- * @param b
- * @param c
- * @returns total
+ * If filling grid as a square instead of by rows
+ * @param value
+ * @returns columns, rows, remaining nodes
  */
-const calcTotal = (a: number, b: number, c: number): number => a + b + c;
+const getSquareProps = (value: number): { c: number; r: number; e: number } => {
+    const sqrt = Math.sqrt(value);
+    const c = Math.ceil(sqrt);
+    const r = Math.floor(value / c) || 0;
+    const e = value - c * r || 0;
+    return { c, r, e };
+};
 
-/**
- * Get the raw percentage of a value
- * @param part
- * @param total
- * @returns raw percentage
- */
-const calcPercentageRaw = (part: number, total: number): number =>
-    (part / total) * 100;
+const createSquareProps = ([
+    largest,
+    medium,
+    smallest,
+]: PartProps[]): GridItemProps[] => {
+    console.log(
+        '🚀 ~ file: index.tsx ~ line 187 ~ largest',
+        largest.percentage,
+        medium.percentage,
+        smallest.percentage
+    );
+    const itemProps = [];
+    const sProps = getSquareProps(smallest.percentage);
+    const mProps = getSquareProps(medium.percentage);
+    console.log('🚀 ~ file: index.tsx ~ line 196 ~ mProps', mProps);
+    // Callbacks
+    const getRow = (c: number): number => (Math.ceil(c / 10) * 10) / 10;
+    const getRowColumnIndex = (r: number, c: number): number => r * 10 - 10 + c;
 
-/**
- * Sort the values from largest to smallest
- * @param a
- * @param b
- * @param c
- * @returns sorted list of values
- */
-const sortValuesLargestToLowest = (collection: PartProps[]): PartProps[] =>
-    collection.sort((a, b) => b.value - a.value);
+    const isValueForRow = (
+        props: { c: number; r: number; e: number },
+        row: number,
+        column: number
+    ): boolean =>
+        (row < props.r && column <= getRowColumnIndex(row, props.c)) ||
+        (row === props.r && column <= getRowColumnIndex(row, props.c));
 
-/**
- * Determine if style override passed in as prop
- * @param color
- * @returns CSS prop object for background or undefined
- */
-const getColorOverride = (color?: string): { background: string } | undefined =>
-    color ? { background: color } : undefined;
+    const isExtraForRow = (
+        props: { c: number; r: number; e: number },
+        row: number,
+        column: number
+    ) => row === props.r + 1 && column <= getRowColumnIndex(row, props.e);
 
-const getGridItemProps = (collection: PartProps[], isSquareFill: boolean) =>
-    isSquareFill ? null : createLinearProps(collection);
+    for (let column = 100; column > 0; column--) {
+        const row = getRow(column);
 
+        const isSmall = false;
+
+        const isMedium =
+            isValueForRow(mProps, row, column) ||
+            isExtraForRow(mProps, row, column);
+
+        const isLarge = !isSmall && !isMedium;
+        const identifier = isSmall
+            ? smallest.id
+            : isMedium
+            ? medium.id
+            : largest.id;
+
+        const itemProp: GridItemProps = {
+            index: column,
+            identifier,
+            isSmall,
+            isMedium,
+            isLarge,
+        };
+        itemProps.push(itemProp);
+    }
+    return itemProps;
+};
+
+const getGridItemProps = ([l, m, s]: PartProps[], isSquareFill: boolean) => {
+    const minSquares = 2;
+    const canSquareS = s.percentage > minSquares;
+    const canSquareM = canSquareS || m.percentage > minSquares;
+    const isHalfHalf = l.percentage === 50;
+    return !isHalfHalf && isSquareFill && (canSquareS || canSquareM)
+        ? createSquareProps([l, m, s])
+        : createLinearProps([l, m, s]);
+};
+
+// TODO: earlier check on negative
+// TODO: earlier check on anything over 100%?
 const WaffleChart: React.FC<Props> = ({
-    partA = 33.4,
-    partB = 50,
-    partC = 27.7,
+    partA = 24,
+    partB = 0,
+    partC = 100 - partA,
     displayPrecision = 0,
     partAlabel = 'count',
     partBlabel = 'count',
     partClabel = 'count',
-    rounding = 'up',
+    rounding = 'nearest',
     isFilledFromTop = false,
     isFrilledFromLeft = false,
-    isSquareFill = false,
+    isSquareFill = true,
     isAnimatedFill = true,
     showDataDisplay = false,
     showTotal = true,
@@ -300,13 +239,13 @@ const WaffleChart: React.FC<Props> = ({
     const styleB = getColorOverride(partBcolor);
     const styleC = getColorOverride(partCcolor);
     const styleTotal = getColorOverride(totalColor);
-    // Calculate raw values
-    const rawTotal = calcTotal(partA, partB, partC);
+    // Calculate raw values and normalize to 0 or positive value
+    const [normA, normB, normC] = normalize(partA, partB, partC);
+    const rawTotal = calcTotal(normA, normB, normC);
     const total = rawTotal.toFixed(displayPrecision);
-    const [percentAraw, percentBraw, percentCraw] = [partA, partB, partC].map(
+    const [percentAraw, percentBraw, percentCraw] = [normA, normB, normC].map(
         (p) => calcPercentageRaw(p, rawTotal)
     );
-    console.log('🚀 ~ file: index.tsx ~ line 308 ~ percentAraw', percentAraw);
     // Create collection of ValueIdentifier obj
     const valueA: PartProps = {
         id: 'a',
