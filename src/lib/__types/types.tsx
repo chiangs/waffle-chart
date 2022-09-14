@@ -37,7 +37,7 @@ export type WaffleChartProps = {
     partClabel?: string;
     rounding?: Rounding;
     isFilledFromTop?: boolean;
-    isFrilledFromLeft?: boolean;
+    isFilledFromLeft?: boolean;
     isSquareFill?: boolean;
     isAnimatedFill?: boolean;
     showDataDisplay?: boolean;

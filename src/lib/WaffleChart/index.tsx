@@ -237,7 +237,7 @@ const WaffleChart: React.FC<Props> = ({
     partClabel = 'C',
     rounding = 'nearest',
     isFilledFromTop = false,
-    isFrilledFromLeft = false,
+    isFilledFromLeft = false,
     isSquareFill = true,
     isAnimatedFill = true,
     showDataDisplay = true,
@@ -289,7 +289,7 @@ const WaffleChart: React.FC<Props> = ({
     const rounded = ordered.map((o) => round(o, rounding));
     // Determing fill direction
     const verticalFill: VerticalFill = isFilledFromTop ? 'top' : 'bottom';
-    const horizontalFill: HorizontalFill = isFrilledFromLeft ? 'left' : 'right';
+    const horizontalFill: HorizontalFill = isFilledFromLeft ? 'left' : 'right';
     // Total Display
     const totalDisplay = showTotal ? (
         <Total style={styleTotal}>{total}</Total>
