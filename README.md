@@ -53,6 +53,8 @@ This is a zero-dependency library built with React, Typescript & Vite.
 
 No `D3` only `HTML`, `CSS`, and `JS/TS`.
 
+> 🚀 ***v2.0.0***: Now supporting three quantities!
+
 ## Usage in commercial projects
 
 If you are using this in a commercial project, please consider leaving a donation/tip. Cheers!
@@ -85,17 +87,21 @@ The chart will render with just the default props.
 |-------------------|-------------------------|-----------|-------|
 | partA             | number                  | 0         | this is the quantity, % is calculated by component |
 | partB             | number                  | 0         | this is the quantity, % is calculated by component |
-| partAlabel        | string                  | 'count'   |       |
-| partBlabel        | string                  | 'count'   |       |
+| partC             | number                  | 0         | this is the quantity, % is calculated by component |
+| displayPrecision  | number                  | 0         | number of decimals for quantity and percentage     |
+| partAlabel        | string                  | 'A'       |       |
+| partBlabel        | string                  | 'B'       |       |
+| partClabel        | string                  | 'C'       |       |
 | rounding          | 'nearest', 'up', 'down' | 'nearest' | up for any amount over the whole, down if under a whole      |
 | isFilledFromTop   | boolean                 | false     |       |
-| isFrilledFromLeft | boolean                 | false     |       |
+| isFilledFromLeft  | boolean                 | false     |       |
 | isSquareFill      | boolean                 | true      | can fill in linear by row if false |
 | isAnimatedFill    | boolean                 | true      | fade in color vs. instant change   |
 | showDataDisplay   | boolean                 | true      |       |
 | showTotal         | boolean                 | false     |       |
 | partAColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
 | partBColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
+| partCColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
 | totalColor        | string                  | undefined | can take any CSS color (hsl, rgb, hex, ...) |
 
 ### Square vs linear fill
@@ -214,24 +220,26 @@ Testing methodology follows the testing-library guiding principles and focusing 
 Latest coverage report:
 
 ```
-Test Files  5 passed (5)
-     Tests  12 passed (12)
-  Start at  22:40:55
-  Duration  2.30s (setup 1ms, collect 797ms, tests 271ms)
+Test Files  6 passed (6)
+     Tests  13 passed (13)
+  Start at  12:41:38
+  Duration  2.26s (setup 2ms, collect 1.08s, tests 395ms)
 
--------------|---------|----------|---------|---------|-------------------
-File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------|---------|----------|---------|---------|-------------------
-All files    |   98.89 |    87.05 |   94.44 |   98.89 |                   
+-------------|---------|----------|---------|---------|---------------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------|---------|----------|---------|---------|---------------------------
+All files    |   98.52 |    87.64 |   95.65 |   98.52 |                           
  Chart       |     100 |      100 |     100 |     100 | 
+  index.tsx  |     100 |      100 |     100 |     100 | 
+ ChartSquare |     100 |      100 |     100 |     100 | 
   index.tsx  |     100 |      100 |     100 |     100 | 
  DataDisplay |     100 |      100 |     100 |     100 | 
   index.tsx  |     100 |      100 |     100 |     100 | 
  Total       |     100 |      100 |     100 |     100 | 
   index.tsx  |     100 |      100 |     100 |     100 | 
- WaffleChart |   98.41 |     84.5 |   91.66 |   98.41 | 
-  index.tsx  |   98.41 |     84.5 |   91.66 |   98.41 | 31-32,103-104    
--------------|---------|----------|---------|---------|-------------------
+ WaffleChart |   97.86 |    84.93 |   94.11 |   97.86 | 
+  index.tsx  |   97.86 |    84.93 |   94.11 |   97.86 | 79-80,106,111,116,199,307
+-------------|---------|----------|---------|---------|---------------------------
 ```
 
 Testing is built and run with:
