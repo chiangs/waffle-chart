@@ -1,5 +1,5 @@
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chiangs/waffle-chart/Release?style=for-the-badge)
-![GitHub all releases](https://img.shields.io/github/downloads/chiangs/waffle-chart/total?style=for-the-badge)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/waffle-chart?style=for-the-badge)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/chiangs/waffle-chart?style=for-the-badge)
 
 - [Introduction](#introduction)
