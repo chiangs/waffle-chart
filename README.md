@@ -55,6 +55,8 @@ No `D3` only `HTML`, `CSS`, and `JS/TS`.
 
 > 🚀 ***v2.0.0***: Now supporting three quantities!
 
+<img src="/assets/waffle-v2.png" alt="waffle chart three values square fill" width="300">
+
 ## Usage in commercial projects
 
 If you are using this in a commercial project, please consider leaving a donation/tip. Cheers!
