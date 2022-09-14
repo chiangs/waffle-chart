@@ -35,7 +35,7 @@ const normalize = (a: number, b: number, c: number): number[] =>
  * @returns raw percentage
  */
 const calcPercentageRaw = (part: number, total: number): number =>
-    (part / total) * 100;
+    (part / total) * 100 || 0;
 
 /**
  * Sort the values from largest to smallest
@@ -228,9 +228,9 @@ const getGridItemProps = ([l, m, s]: PartProps[], isSquareFill: boolean) => {
 };
 
 const WaffleChart: React.FC<Props> = ({
-    partA = 90,
-    partB = 1.5,
-    partC = 10,
+    partA = 0,
+    partB = 0,
+    partC = 0,
     displayPrecision = 0,
     partAlabel = 'A',
     partBlabel = 'B',

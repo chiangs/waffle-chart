@@ -9,14 +9,14 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
     className="total"
     data-testid="total"
   >
-    102
+    0
   </h3>
   <div
     className="waffle-chart chart-container bottom right"
     data-testid="chart-container"
   >
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -27,7 +27,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square100"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -38,7 +38,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square99"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -49,7 +49,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square98"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -60,7 +60,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square97"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -71,7 +71,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square96"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -82,7 +82,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square95"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -93,7 +93,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square94"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -104,7 +104,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square93"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -115,7 +115,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square92"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -126,7 +126,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square91"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -137,7 +137,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square90"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -148,7 +148,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square89"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -159,7 +159,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square88"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -170,7 +170,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square87"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -181,7 +181,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square86"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -192,7 +192,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square85"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -203,7 +203,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square84"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -214,7 +214,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square83"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -225,7 +225,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square82"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -236,7 +236,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square81"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -247,7 +247,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square80"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -258,7 +258,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square79"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -269,7 +269,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square78"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -280,7 +280,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square77"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -291,7 +291,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square76"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -302,7 +302,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square75"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -313,7 +313,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square74"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -324,7 +324,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square73"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -335,7 +335,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square72"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -346,7 +346,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square71"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -357,7 +357,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square70"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -368,7 +368,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square69"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -379,7 +379,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square68"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -390,7 +390,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square67"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -401,7 +401,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square66"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -412,7 +412,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square65"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -423,7 +423,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square64"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -434,7 +434,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square63"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -445,7 +445,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square62"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -456,7 +456,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square61"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -467,7 +467,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square60"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -478,7 +478,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square59"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -489,7 +489,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square58"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -500,7 +500,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square57"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -511,7 +511,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square56"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -522,7 +522,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square55"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -533,7 +533,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square54"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -544,7 +544,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square53"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -555,7 +555,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square52"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -566,7 +566,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square51"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -577,7 +577,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square50"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -588,7 +588,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square49"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -599,7 +599,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square48"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -610,7 +610,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square47"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -621,7 +621,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square46"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -632,7 +632,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square45"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -643,7 +643,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square44"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -654,7 +654,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square43"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -665,7 +665,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square42"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -676,7 +676,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square41"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -687,7 +687,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square40"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -698,7 +698,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square39"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -709,7 +709,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square38"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -720,7 +720,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square37"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -731,7 +731,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square36"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -742,7 +742,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square35"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -753,7 +753,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square34"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -764,7 +764,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square33"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -775,7 +775,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square32"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -786,7 +786,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square31"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -797,7 +797,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square30"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -808,7 +808,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square29"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -819,7 +819,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square28"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -830,7 +830,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square27"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -841,7 +841,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square26"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -852,7 +852,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square25"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -863,40 +863,40 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square24"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square23"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square22"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square21"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -907,7 +907,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square20"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -918,7 +918,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square19"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -929,7 +929,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square18"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -940,7 +940,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square17"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -951,7 +951,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square16"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -962,51 +962,51 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square15"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square14"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square13"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square12"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square11"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -1017,7 +1017,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square10"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -1028,7 +1028,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square9"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -1039,7 +1039,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square8"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -1050,7 +1050,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square7"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -1061,7 +1061,7 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square6"
     />
     <div
-      className="waffle-chart-square a animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
@@ -1072,45 +1072,45 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
       title="square5"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square4"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square3"
     />
     <div
-      className="waffle-chart-square c animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-c)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square2"
     />
     <div
-      className="waffle-chart-square b animate-fill"
+      className="waffle-chart-square a animate-fill zeroed"
       data-testid="waffle-chart-square"
       onClick={[Function]}
       style={
         {
-          "background": "var(--bg-fallback-b)",
+          "background": "var(--bg-fallback-a)",
         }
       }
       title="square1"
@@ -1120,31 +1120,6 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
     className="waffle-chart-display-container bottom"
     data-testid="display-container"
   >
-    <div
-      className="display-item b"
-      data-testid="display-item"
-      style={
-        {
-          "color": undefined,
-        }
-      }
-    >
-      <h3
-        className="display-item-title"
-        data-testid="display-percentage"
-      >
-        1
-        %
-      </h3>
-      <p
-        className="display-item-description"
-        data-testid="display-count"
-      >
-        1.5
-         
-        B
-      </p>
-    </div>
     <div
       className="display-item c"
       data-testid="display-item"
@@ -1158,16 +1133,41 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
         className="display-item-title"
         data-testid="display-percentage"
       >
-        10
+        0
         %
       </h3>
       <p
         className="display-item-description"
         data-testid="display-count"
       >
-        10
+        0
          
         C
+      </p>
+    </div>
+    <div
+      className="display-item b"
+      data-testid="display-item"
+      style={
+        {
+          "color": undefined,
+        }
+      }
+    >
+      <h3
+        className="display-item-title"
+        data-testid="display-percentage"
+      >
+        0
+        %
+      </h3>
+      <p
+        className="display-item-description"
+        data-testid="display-count"
+      >
+        0
+         
+        B
       </p>
     </div>
     <div
@@ -1183,14 +1183,14 @@ exports[`WaffleChart > WaffleChart component renders correctly 1`] = `
         className="display-item-title"
         data-testid="display-percentage"
       >
-        89
+        0
         %
       </h3>
       <p
         className="display-item-description"
         data-testid="display-count"
       >
-        90
+        0
          
         A
       </p>
